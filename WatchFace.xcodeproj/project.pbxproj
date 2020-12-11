@@ -1,0 +1,764 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		73B6920CEAAA08F6BE1E9BB3 /* Pods_WatchFace.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26023DEE132B04ACB3A1BC8D /* Pods_WatchFace.framework */; };
+		FA4C46F5257F8B4600119A1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4C46F4257F8B4600119A1F /* AppDelegate.swift */; };
+		FA4C46F7257F8B4600119A1F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4C46F6257F8B4600119A1F /* SceneDelegate.swift */; };
+		FA4C46FE257F8B4A00119A1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA4C46FD257F8B4A00119A1F /* Assets.xcassets */; };
+		FA4C4701257F8B4A00119A1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA4C46FF257F8B4A00119A1F /* LaunchScreen.storyboard */; };
+		FA4C4719257F8E9F00119A1F /* WatchFacesListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4C4718257F8E9F00119A1F /* WatchFacesListVC.swift */; };
+		FA4C471D257F8EB000119A1F /* WatchFacesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4C471C257F8EB000119A1F /* WatchFacesView.swift */; };
+		FA4C4721257F8ECF00119A1F /* WatchFacesListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4C4720257F8ECF00119A1F /* WatchFacesListInteractor.swift */; };
+		FA4C4725257F8EDA00119A1F /* WatchFacesListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4C4724257F8EDA00119A1F /* WatchFacesListPresenter.swift */; };
+		FA4C4728257F8EE200119A1F /* WatchFacesListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4C4727257F8EE200119A1F /* WatchFacesListRouter.swift */; };
+		FA4C472B257F8EEF00119A1F /* WatchFacesListBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4C472A257F8EEF00119A1F /* WatchFacesListBuilder.swift */; };
+		FA4C472E257F94A200119A1F /* WatchFacesTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4C472D257F94A200119A1F /* WatchFacesTopView.swift */; };
+		FA4C4734257F9E1300119A1F /* TopWatchFaceCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4C4733257F9E1300119A1F /* TopWatchFaceCVC.swift */; };
+		FA4C4739257F9E5A00119A1F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4C4738257F9E5A00119A1F /* Extensions.swift */; };
+		FA4C473D257FAA4E00119A1F /* CategoryTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4C473C257FAA4E00119A1F /* CategoryTVC.swift */; };
+		FA4C4740257FADDB00119A1F /* WatchFaceCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4C473F257FADDB00119A1F /* WatchFaceCVC.swift */; };
+		FA4C47502580A70000119A1F /* LeftMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4C474F2580A70000119A1F /* LeftMenuVC.swift */; };
+		FA4C47542580A72100119A1F /* LeftMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4C47532580A72100119A1F /* LeftMenuView.swift */; };
+		FA4C47572580A76C00119A1F /* LeftMenuRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4C47562580A76C00119A1F /* LeftMenuRouter.swift */; };
+		FA4C475A2580A77400119A1F /* LeftMenuBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4C47592580A77400119A1F /* LeftMenuBuilder.swift */; };
+		FA4C475D2580A8DB00119A1F /* LeftMenuNVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4C475C2580A8DB00119A1F /* LeftMenuNVC.swift */; };
+		FA4C47602580AB1900119A1F /* LeftMenuTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4C475F2580AB1900119A1F /* LeftMenuTopView.swift */; };
+		FA4C47652580AD4C00119A1F /* LeftMenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4C47642580AD4C00119A1F /* LeftMenuPresenter.swift */; };
+		FA4C47692580AF4A00119A1F /* LeftMenuTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4C47682580AF4A00119A1F /* LeftMenuTVC.swift */; };
+		FA4C476F2580B83D00119A1F /* FacesGroupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4C476E2580B83D00119A1F /* FacesGroupVC.swift */; };
+		FA4C47722580B91A00119A1F /* FacesGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4C47712580B91A00119A1F /* FacesGroupView.swift */; };
+		FA4C47752580B94800119A1F /* FacesGroupPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4C47742580B94800119A1F /* FacesGroupPresenter.swift */; };
+		FA4C47782580B98000119A1F /* FacesGroupInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4C47772580B98000119A1F /* FacesGroupInteractor.swift */; };
+		FA4C477B2580B9A100119A1F /* FacesGroupRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4C477A2580B9A100119A1F /* FacesGroupRouter.swift */; };
+		FA4C477E2580B9E900119A1F /* FacesGroupBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4C477D2580B9E900119A1F /* FacesGroupBuilder.swift */; };
+		FAA95DB2258215C80028B4D4 /* WatchPreviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA95DB1258215C80028B4D4 /* WatchPreviewVC.swift */; };
+		FAA95DB5258215D80028B4D4 /* WatchPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA95DB4258215D80028B4D4 /* WatchPreviewView.swift */; };
+		FAA95DB8258215F90028B4D4 /* WatchPreviewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA95DB7258215F90028B4D4 /* WatchPreviewBuilder.swift */; };
+		FAA95DBB258216020028B4D4 /* WatchPreviewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA95DBA258216020028B4D4 /* WatchPreviewInteractor.swift */; };
+		FAA95DBE2582160A0028B4D4 /* WatchPreviewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA95DBD2582160A0028B4D4 /* WatchPreviewPresenter.swift */; };
+		FAA95DC1258216120028B4D4 /* WatchPreviewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA95DC0258216120028B4D4 /* WatchPreviewRouter.swift */; };
+		FAA95DE525835FC60028B4D4 /* LockingScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA95DE425835FC60028B4D4 /* LockingScreenVC.swift */; };
+		FAA95DE92583608F0028B4D4 /* LockingScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA95DE82583608F0028B4D4 /* LockingScreenView.swift */; };
+		FAA95DEC258360A30028B4D4 /* LockingScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA95DEB258360A30028B4D4 /* LockingScreenInteractor.swift */; };
+		FAA95DEF258360AE0028B4D4 /* LockingScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA95DEE258360AE0028B4D4 /* LockingScreenPresenter.swift */; };
+		FAA95DF2258360B60028B4D4 /* LockingScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA95DF1258360B60028B4D4 /* LockingScreenRouter.swift */; };
+		FAA95DF5258360BC0028B4D4 /* LockingScreenBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA95DF4258360BC0028B4D4 /* LockingScreenBuilder.swift */; };
+		FAA95DFE2583738E0028B4D4 /* FirstScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA95DFD2583738E0028B4D4 /* FirstScreenVC.swift */; };
+		FAA95E01258373990028B4D4 /* SecondScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA95E00258373990028B4D4 /* SecondScreenVC.swift */; };
+		FAA95E04258373A40028B4D4 /* ThirdScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA95E03258373A40028B4D4 /* ThirdScreenVC.swift */; };
+		FAA95E07258373D30028B4D4 /* WelcomeTourInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA95E06258373D30028B4D4 /* WelcomeTourInteractor.swift */; };
+		FAA95E0A258373DD0028B4D4 /* WelcomeTourPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA95E09258373DD0028B4D4 /* WelcomeTourPresenter.swift */; };
+		FAA95E0D258373E40028B4D4 /* WelcomeTourRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA95E0C258373E40028B4D4 /* WelcomeTourRouter.swift */; };
+		FAA95E10258373EA0028B4D4 /* WelcomeTourBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA95E0F258373EA0028B4D4 /* WelcomeTourBuilder.swift */; };
+		FAA95E1325837B350028B4D4 /* FirstScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA95E1225837B350028B4D4 /* FirstScreenView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		26023DEE132B04ACB3A1BC8D /* Pods_WatchFace.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WatchFace.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A20A04CE1EE345D5EE47B62 /* Pods-WatchFace.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchFace.debug.xcconfig"; path = "Target Support Files/Pods-WatchFace/Pods-WatchFace.debug.xcconfig"; sourceTree = "<group>"; };
+		A6BFD3FF216B41BCEFB4D59D /* Pods-WatchFace.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchFace.release.xcconfig"; path = "Target Support Files/Pods-WatchFace/Pods-WatchFace.release.xcconfig"; sourceTree = "<group>"; };
+		FA4C46F1257F8B4600119A1F /* WatchFace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchFace.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA4C46F4257F8B4600119A1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FA4C46F6257F8B4600119A1F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FA4C46FD257F8B4A00119A1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FA4C4700257F8B4A00119A1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FA4C4702257F8B4A00119A1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA4C4718257F8E9F00119A1F /* WatchFacesListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchFacesListVC.swift; sourceTree = "<group>"; };
+		FA4C471C257F8EB000119A1F /* WatchFacesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchFacesView.swift; sourceTree = "<group>"; };
+		FA4C4720257F8ECF00119A1F /* WatchFacesListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchFacesListInteractor.swift; sourceTree = "<group>"; };
+		FA4C4724257F8EDA00119A1F /* WatchFacesListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchFacesListPresenter.swift; sourceTree = "<group>"; };
+		FA4C4727257F8EE200119A1F /* WatchFacesListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchFacesListRouter.swift; sourceTree = "<group>"; };
+		FA4C472A257F8EEF00119A1F /* WatchFacesListBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchFacesListBuilder.swift; sourceTree = "<group>"; };
+		FA4C472D257F94A200119A1F /* WatchFacesTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchFacesTopView.swift; sourceTree = "<group>"; };
+		FA4C4733257F9E1300119A1F /* TopWatchFaceCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopWatchFaceCVC.swift; sourceTree = "<group>"; };
+		FA4C4738257F9E5A00119A1F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		FA4C473C257FAA4E00119A1F /* CategoryTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTVC.swift; sourceTree = "<group>"; };
+		FA4C473F257FADDB00119A1F /* WatchFaceCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchFaceCVC.swift; sourceTree = "<group>"; };
+		FA4C474F2580A70000119A1F /* LeftMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftMenuVC.swift; sourceTree = "<group>"; };
+		FA4C47532580A72100119A1F /* LeftMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftMenuView.swift; sourceTree = "<group>"; };
+		FA4C47562580A76C00119A1F /* LeftMenuRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftMenuRouter.swift; sourceTree = "<group>"; };
+		FA4C47592580A77400119A1F /* LeftMenuBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftMenuBuilder.swift; sourceTree = "<group>"; };
+		FA4C475C2580A8DB00119A1F /* LeftMenuNVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftMenuNVC.swift; sourceTree = "<group>"; };
+		FA4C475F2580AB1900119A1F /* LeftMenuTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftMenuTopView.swift; sourceTree = "<group>"; };
+		FA4C47642580AD4C00119A1F /* LeftMenuPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftMenuPresenter.swift; sourceTree = "<group>"; };
+		FA4C47682580AF4A00119A1F /* LeftMenuTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftMenuTVC.swift; sourceTree = "<group>"; };
+		FA4C476E2580B83D00119A1F /* FacesGroupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacesGroupVC.swift; sourceTree = "<group>"; };
+		FA4C47712580B91A00119A1F /* FacesGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacesGroupView.swift; sourceTree = "<group>"; };
+		FA4C47742580B94800119A1F /* FacesGroupPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacesGroupPresenter.swift; sourceTree = "<group>"; };
+		FA4C47772580B98000119A1F /* FacesGroupInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacesGroupInteractor.swift; sourceTree = "<group>"; };
+		FA4C477A2580B9A100119A1F /* FacesGroupRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacesGroupRouter.swift; sourceTree = "<group>"; };
+		FA4C477D2580B9E900119A1F /* FacesGroupBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacesGroupBuilder.swift; sourceTree = "<group>"; };
+		FAA95DB1258215C80028B4D4 /* WatchPreviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchPreviewVC.swift; sourceTree = "<group>"; };
+		FAA95DB4258215D80028B4D4 /* WatchPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchPreviewView.swift; sourceTree = "<group>"; };
+		FAA95DB7258215F90028B4D4 /* WatchPreviewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchPreviewBuilder.swift; sourceTree = "<group>"; };
+		FAA95DBA258216020028B4D4 /* WatchPreviewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchPreviewInteractor.swift; sourceTree = "<group>"; };
+		FAA95DBD2582160A0028B4D4 /* WatchPreviewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchPreviewPresenter.swift; sourceTree = "<group>"; };
+		FAA95DC0258216120028B4D4 /* WatchPreviewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchPreviewRouter.swift; sourceTree = "<group>"; };
+		FAA95DE425835FC60028B4D4 /* LockingScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockingScreenVC.swift; sourceTree = "<group>"; };
+		FAA95DE82583608F0028B4D4 /* LockingScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockingScreenView.swift; sourceTree = "<group>"; };
+		FAA95DEB258360A30028B4D4 /* LockingScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockingScreenInteractor.swift; sourceTree = "<group>"; };
+		FAA95DEE258360AE0028B4D4 /* LockingScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockingScreenPresenter.swift; sourceTree = "<group>"; };
+		FAA95DF1258360B60028B4D4 /* LockingScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockingScreenRouter.swift; sourceTree = "<group>"; };
+		FAA95DF4258360BC0028B4D4 /* LockingScreenBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockingScreenBuilder.swift; sourceTree = "<group>"; };
+		FAA95DFD2583738E0028B4D4 /* FirstScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreenVC.swift; sourceTree = "<group>"; };
+		FAA95E00258373990028B4D4 /* SecondScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondScreenVC.swift; sourceTree = "<group>"; };
+		FAA95E03258373A40028B4D4 /* ThirdScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdScreenVC.swift; sourceTree = "<group>"; };
+		FAA95E06258373D30028B4D4 /* WelcomeTourInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeTourInteractor.swift; sourceTree = "<group>"; };
+		FAA95E09258373DD0028B4D4 /* WelcomeTourPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeTourPresenter.swift; sourceTree = "<group>"; };
+		FAA95E0C258373E40028B4D4 /* WelcomeTourRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeTourRouter.swift; sourceTree = "<group>"; };
+		FAA95E0F258373EA0028B4D4 /* WelcomeTourBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeTourBuilder.swift; sourceTree = "<group>"; };
+		FAA95E1225837B350028B4D4 /* FirstScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreenView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FA4C46EE257F8B4600119A1F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73B6920CEAAA08F6BE1E9BB3 /* Pods_WatchFace.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		43807012551477CAC4ECC38D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8A20A04CE1EE345D5EE47B62 /* Pods-WatchFace.debug.xcconfig */,
+				A6BFD3FF216B41BCEFB4D59D /* Pods-WatchFace.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		9CF23CA04FE90629EBA9557C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				26023DEE132B04ACB3A1BC8D /* Pods_WatchFace.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FA4C46E8257F8B4600119A1F = {
+			isa = PBXGroup;
+			children = (
+				FA4C46F3257F8B4600119A1F /* WatchFace */,
+				FA4C46F2257F8B4600119A1F /* Products */,
+				43807012551477CAC4ECC38D /* Pods */,
+				9CF23CA04FE90629EBA9557C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FA4C46F2257F8B4600119A1F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA4C46F1257F8B4600119A1F /* WatchFace.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FA4C46F3257F8B4600119A1F /* WatchFace */ = {
+			isa = PBXGroup;
+			children = (
+				FA4C470E257F8BD300119A1F /* Application */,
+				FA4C4710257F8BE700119A1F /* Modules */,
+				FA4C4712257F8BFB00119A1F /* Services */,
+				FA4C4713257F8C0700119A1F /* Entities */,
+			);
+			path = WatchFace;
+			sourceTree = "<group>";
+		};
+		FA4C470E257F8BD300119A1F /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				FA4C4702257F8B4A00119A1F /* Info.plist */,
+				FA4C46F4257F8B4600119A1F /* AppDelegate.swift */,
+				FA4C46F6257F8B4600119A1F /* SceneDelegate.swift */,
+				FA4C46FD257F8B4A00119A1F /* Assets.xcassets */,
+				FA4C46FF257F8B4A00119A1F /* LaunchScreen.storyboard */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		FA4C4710257F8BE700119A1F /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				FA4C474D2580A6D300119A1F /* LeftMenu */,
+				FAA95DF8258372CF0028B4D4 /* WelcomeTour */,
+				FA4C4716257F8E5300119A1F /* FacesList */,
+				FA4C476C2580B80600119A1F /* FacesGroup */,
+				FAA95DAF2582159F0028B4D4 /* WatchPreview */,
+				FAA95DE225835EBE0028B4D4 /* LockingScreen */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		FA4C4712257F8BFB00119A1F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FA4C4738257F9E5A00119A1F /* Extensions.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		FA4C4713257F8C0700119A1F /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		FA4C4716257F8E5300119A1F /* FacesList */ = {
+			isa = PBXGroup;
+			children = (
+				FA4C4717257F8E8F00119A1F /* View */,
+				FA4C4720257F8ECF00119A1F /* WatchFacesListInteractor.swift */,
+				FA4C4724257F8EDA00119A1F /* WatchFacesListPresenter.swift */,
+				FA4C4727257F8EE200119A1F /* WatchFacesListRouter.swift */,
+				FA4C472A257F8EEF00119A1F /* WatchFacesListBuilder.swift */,
+			);
+			path = FacesList;
+			sourceTree = "<group>";
+		};
+		FA4C4717257F8E8F00119A1F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA4C4718257F8E9F00119A1F /* WatchFacesListVC.swift */,
+				FA4C4732257F9DD400119A1F /* Views */,
+				FA4C4731257F9DCF00119A1F /* Cells */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FA4C4731257F9DCF00119A1F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				FA4C4733257F9E1300119A1F /* TopWatchFaceCVC.swift */,
+				FA4C473C257FAA4E00119A1F /* CategoryTVC.swift */,
+				FA4C473F257FADDB00119A1F /* WatchFaceCVC.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		FA4C4732257F9DD400119A1F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FA4C471C257F8EB000119A1F /* WatchFacesView.swift */,
+				FA4C472D257F94A200119A1F /* WatchFacesTopView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FA4C474D2580A6D300119A1F /* LeftMenu */ = {
+			isa = PBXGroup;
+			children = (
+				FA4C474E2580A6E800119A1F /* View */,
+				FA4C47642580AD4C00119A1F /* LeftMenuPresenter.swift */,
+				FA4C47562580A76C00119A1F /* LeftMenuRouter.swift */,
+				FA4C47592580A77400119A1F /* LeftMenuBuilder.swift */,
+			);
+			path = LeftMenu;
+			sourceTree = "<group>";
+		};
+		FA4C474E2580A6E800119A1F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA4C474F2580A70000119A1F /* LeftMenuVC.swift */,
+				FA4C475C2580A8DB00119A1F /* LeftMenuNVC.swift */,
+				FA4C47622580AD2600119A1F /* Views */,
+				FA4C47672580AF1000119A1F /* Cells */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FA4C47622580AD2600119A1F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FA4C47532580A72100119A1F /* LeftMenuView.swift */,
+				FA4C475F2580AB1900119A1F /* LeftMenuTopView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FA4C47672580AF1000119A1F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				FA4C47682580AF4A00119A1F /* LeftMenuTVC.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		FA4C476C2580B80600119A1F /* FacesGroup */ = {
+			isa = PBXGroup;
+			children = (
+				FA4C476D2580B82A00119A1F /* View */,
+				FA4C47742580B94800119A1F /* FacesGroupPresenter.swift */,
+				FA4C47772580B98000119A1F /* FacesGroupInteractor.swift */,
+				FA4C477A2580B9A100119A1F /* FacesGroupRouter.swift */,
+				FA4C477D2580B9E900119A1F /* FacesGroupBuilder.swift */,
+			);
+			path = FacesGroup;
+			sourceTree = "<group>";
+		};
+		FA4C476D2580B82A00119A1F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA4C476E2580B83D00119A1F /* FacesGroupVC.swift */,
+				FA4C47712580B91A00119A1F /* FacesGroupView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FAA95DAF2582159F0028B4D4 /* WatchPreview */ = {
+			isa = PBXGroup;
+			children = (
+				FAA95DB0258215B70028B4D4 /* View */,
+				FAA95DBA258216020028B4D4 /* WatchPreviewInteractor.swift */,
+				FAA95DBD2582160A0028B4D4 /* WatchPreviewPresenter.swift */,
+				FAA95DC0258216120028B4D4 /* WatchPreviewRouter.swift */,
+				FAA95DB7258215F90028B4D4 /* WatchPreviewBuilder.swift */,
+			);
+			path = WatchPreview;
+			sourceTree = "<group>";
+		};
+		FAA95DB0258215B70028B4D4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FAA95DB1258215C80028B4D4 /* WatchPreviewVC.swift */,
+				FAA95DB4258215D80028B4D4 /* WatchPreviewView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FAA95DE225835EBE0028B4D4 /* LockingScreen */ = {
+			isa = PBXGroup;
+			children = (
+				FAA95DE325835ED40028B4D4 /* View */,
+				FAA95DEB258360A30028B4D4 /* LockingScreenInteractor.swift */,
+				FAA95DEE258360AE0028B4D4 /* LockingScreenPresenter.swift */,
+				FAA95DF1258360B60028B4D4 /* LockingScreenRouter.swift */,
+				FAA95DF4258360BC0028B4D4 /* LockingScreenBuilder.swift */,
+			);
+			path = LockingScreen;
+			sourceTree = "<group>";
+		};
+		FAA95DE325835ED40028B4D4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FAA95DE425835FC60028B4D4 /* LockingScreenVC.swift */,
+				FAA95DE82583608F0028B4D4 /* LockingScreenView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FAA95DF8258372CF0028B4D4 /* WelcomeTour */ = {
+			isa = PBXGroup;
+			children = (
+				FAA95DF9258373280028B4D4 /* View */,
+				FAA95E06258373D30028B4D4 /* WelcomeTourInteractor.swift */,
+				FAA95E09258373DD0028B4D4 /* WelcomeTourPresenter.swift */,
+				FAA95E0C258373E40028B4D4 /* WelcomeTourRouter.swift */,
+				FAA95E0F258373EA0028B4D4 /* WelcomeTourBuilder.swift */,
+			);
+			path = WelcomeTour;
+			sourceTree = "<group>";
+		};
+		FAA95DF9258373280028B4D4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FAA95DFA258373450028B4D4 /* FirstScreen */,
+				FAA95DFB2583734E0028B4D4 /* SecondScreen */,
+				FAA95DFC258373590028B4D4 /* ThirdScreen */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FAA95DFA258373450028B4D4 /* FirstScreen */ = {
+			isa = PBXGroup;
+			children = (
+				FAA95DFD2583738E0028B4D4 /* FirstScreenVC.swift */,
+				FAA95E1225837B350028B4D4 /* FirstScreenView.swift */,
+			);
+			path = FirstScreen;
+			sourceTree = "<group>";
+		};
+		FAA95DFB2583734E0028B4D4 /* SecondScreen */ = {
+			isa = PBXGroup;
+			children = (
+				FAA95E00258373990028B4D4 /* SecondScreenVC.swift */,
+			);
+			path = SecondScreen;
+			sourceTree = "<group>";
+		};
+		FAA95DFC258373590028B4D4 /* ThirdScreen */ = {
+			isa = PBXGroup;
+			children = (
+				FAA95E03258373A40028B4D4 /* ThirdScreenVC.swift */,
+			);
+			path = ThirdScreen;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FA4C46F0257F8B4600119A1F /* WatchFace */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA4C4705257F8B4A00119A1F /* Build configuration list for PBXNativeTarget "WatchFace" */;
+			buildPhases = (
+				4D3A4F5E98960BFF521FBB10 /* [CP] Check Pods Manifest.lock */,
+				FA4C46ED257F8B4600119A1F /* Sources */,
+				FA4C46EE257F8B4600119A1F /* Frameworks */,
+				FA4C46EF257F8B4600119A1F /* Resources */,
+				214FC273C6B5727A1C80497D /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WatchFace;
+			productName = WatchFace;
+			productReference = FA4C46F1257F8B4600119A1F /* WatchFace.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FA4C46E9257F8B4600119A1F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1220;
+				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					FA4C46F0257F8B4600119A1F = {
+						CreatedOnToolsVersion = 12.2;
+					};
+				};
+			};
+			buildConfigurationList = FA4C46EC257F8B4600119A1F /* Build configuration list for PBXProject "WatchFace" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FA4C46E8257F8B4600119A1F;
+			productRefGroup = FA4C46F2257F8B4600119A1F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FA4C46F0257F8B4600119A1F /* WatchFace */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FA4C46EF257F8B4600119A1F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA4C4701257F8B4A00119A1F /* LaunchScreen.storyboard in Resources */,
+				FA4C46FE257F8B4A00119A1F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		214FC273C6B5727A1C80497D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WatchFace/Pods-WatchFace-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WatchFace/Pods-WatchFace-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WatchFace/Pods-WatchFace-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4D3A4F5E98960BFF521FBB10 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WatchFace-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FA4C46ED257F8B4600119A1F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA4C47602580AB1900119A1F /* LeftMenuTopView.swift in Sources */,
+				FA4C47782580B98000119A1F /* FacesGroupInteractor.swift in Sources */,
+				FA4C476F2580B83D00119A1F /* FacesGroupVC.swift in Sources */,
+				FA4C477B2580B9A100119A1F /* FacesGroupRouter.swift in Sources */,
+				FA4C47572580A76C00119A1F /* LeftMenuRouter.swift in Sources */,
+				FAA95DF5258360BC0028B4D4 /* LockingScreenBuilder.swift in Sources */,
+				FA4C47752580B94800119A1F /* FacesGroupPresenter.swift in Sources */,
+				FAA95DFE2583738E0028B4D4 /* FirstScreenVC.swift in Sources */,
+				FA4C47652580AD4C00119A1F /* LeftMenuPresenter.swift in Sources */,
+				FAA95DBE2582160A0028B4D4 /* WatchPreviewPresenter.swift in Sources */,
+				FA4C4740257FADDB00119A1F /* WatchFaceCVC.swift in Sources */,
+				FA4C471D257F8EB000119A1F /* WatchFacesView.swift in Sources */,
+				FAA95DB2258215C80028B4D4 /* WatchPreviewVC.swift in Sources */,
+				FA4C4734257F9E1300119A1F /* TopWatchFaceCVC.swift in Sources */,
+				FAA95DB5258215D80028B4D4 /* WatchPreviewView.swift in Sources */,
+				FA4C47692580AF4A00119A1F /* LeftMenuTVC.swift in Sources */,
+				FA4C47542580A72100119A1F /* LeftMenuView.swift in Sources */,
+				FA4C475D2580A8DB00119A1F /* LeftMenuNVC.swift in Sources */,
+				FAA95E1325837B350028B4D4 /* FirstScreenView.swift in Sources */,
+				FA4C46F5257F8B4600119A1F /* AppDelegate.swift in Sources */,
+				FA4C47722580B91A00119A1F /* FacesGroupView.swift in Sources */,
+				FAA95DEC258360A30028B4D4 /* LockingScreenInteractor.swift in Sources */,
+				FA4C4728257F8EE200119A1F /* WatchFacesListRouter.swift in Sources */,
+				FAA95DBB258216020028B4D4 /* WatchPreviewInteractor.swift in Sources */,
+				FA4C472B257F8EEF00119A1F /* WatchFacesListBuilder.swift in Sources */,
+				FAA95E04258373A40028B4D4 /* ThirdScreenVC.swift in Sources */,
+				FA4C472E257F94A200119A1F /* WatchFacesTopView.swift in Sources */,
+				FAA95DE525835FC60028B4D4 /* LockingScreenVC.swift in Sources */,
+				FA4C46F7257F8B4600119A1F /* SceneDelegate.swift in Sources */,
+				FA4C4719257F8E9F00119A1F /* WatchFacesListVC.swift in Sources */,
+				FA4C4725257F8EDA00119A1F /* WatchFacesListPresenter.swift in Sources */,
+				FA4C475A2580A77400119A1F /* LeftMenuBuilder.swift in Sources */,
+				FAA95DEF258360AE0028B4D4 /* LockingScreenPresenter.swift in Sources */,
+				FAA95E01258373990028B4D4 /* SecondScreenVC.swift in Sources */,
+				FAA95E07258373D30028B4D4 /* WelcomeTourInteractor.swift in Sources */,
+				FAA95DB8258215F90028B4D4 /* WatchPreviewBuilder.swift in Sources */,
+				FAA95E0D258373E40028B4D4 /* WelcomeTourRouter.swift in Sources */,
+				FAA95E0A258373DD0028B4D4 /* WelcomeTourPresenter.swift in Sources */,
+				FA4C47502580A70000119A1F /* LeftMenuVC.swift in Sources */,
+				FA4C4739257F9E5A00119A1F /* Extensions.swift in Sources */,
+				FA4C4721257F8ECF00119A1F /* WatchFacesListInteractor.swift in Sources */,
+				FAA95E10258373EA0028B4D4 /* WelcomeTourBuilder.swift in Sources */,
+				FAA95DC1258216120028B4D4 /* WatchPreviewRouter.swift in Sources */,
+				FAA95DF2258360B60028B4D4 /* LockingScreenRouter.swift in Sources */,
+				FA4C473D257FAA4E00119A1F /* CategoryTVC.swift in Sources */,
+				FA4C477E2580B9E900119A1F /* FacesGroupBuilder.swift in Sources */,
+				FAA95DE92583608F0028B4D4 /* LockingScreenView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FA4C46FF257F8B4A00119A1F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA4C4700257F8B4A00119A1F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FA4C4703257F8B4A00119A1F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FA4C4704257F8B4A00119A1F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FA4C4706257F8B4A00119A1F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A20A04CE1EE345D5EE47B62 /* Pods-WatchFace.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GYMF6NUDH3;
+				INFOPLIST_FILE = "$(SRCROOT)/WatchFace/Application/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = forafontov.WatchFace;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FA4C4707257F8B4A00119A1F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6BFD3FF216B41BCEFB4D59D /* Pods-WatchFace.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GYMF6NUDH3;
+				INFOPLIST_FILE = "$(SRCROOT)/WatchFace/Application/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = forafontov.WatchFace;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FA4C46EC257F8B4600119A1F /* Build configuration list for PBXProject "WatchFace" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA4C4703257F8B4A00119A1F /* Debug */,
+				FA4C4704257F8B4A00119A1F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA4C4705257F8B4A00119A1F /* Build configuration list for PBXNativeTarget "WatchFace" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA4C4706257F8B4A00119A1F /* Debug */,
+				FA4C4707257F8B4A00119A1F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FA4C46E9257F8B4600119A1F /* Project object */;
+}
