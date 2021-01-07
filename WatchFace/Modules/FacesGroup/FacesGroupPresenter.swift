@@ -9,6 +9,7 @@ import UIKit
 
 protocol IFacesGroupPresenter: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func cancelBtnPressed()
+    func setCategory(_ category: WatchCategory?)
 }
 
 class FacesGroupPresenter: NSObject, IFacesGroupPresenter {
@@ -17,6 +18,8 @@ class FacesGroupPresenter: NSObject, IFacesGroupPresenter {
     private var router: IFacesGroupRouter?
     private var interactor: IFacesGroupInteractor?
     
+    private var category: WatchCategory?
+
     init(view: FacesGroupVC, router: IFacesGroupRouter, interactor: IFacesGroupInteractor) {
         self.view = view
         self.router = router
@@ -26,16 +29,25 @@ class FacesGroupPresenter: NSObject, IFacesGroupPresenter {
     func cancelBtnPressed() {
         router?.cancelBtnPressed()
     }
+    
+    func setCategory(_ category: WatchCategory?) {
+        self.category = category
+        
+        view?.mainView.topLabel.text = category?.name
+    }
+    
 }
 
 extension FacesGroupPresenter {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 60
+        return category?.watches.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: WatchFaceCVC.className, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: WatchFaceCVC.className, for: indexPath) as! WatchFaceCVC
 
+        cell.watch = category?.watches[indexPath.row]
+        
         return cell
     }
     
@@ -50,6 +62,9 @@ extension FacesGroupPresenter {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        router?.presentWatchPreview(UIImage(named: "Apple Watch 44mm"))
+        let watch = category?.watches[indexPath.row]
+        router?.presentWatchPreview(watch, groupName: category?.name)
+        
+        UIImpactFeedbackGenerator(style: .light).impactOccurred()
     }
 }

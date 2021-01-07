@@ -7,6 +7,7 @@
 
 import UIKit
 import SideMenu
+import SkeletonView
 
 class WatchFacesListVC: UIViewController {
 
@@ -14,9 +15,15 @@ class WatchFacesListVC: UIViewController {
 
     private var presenter: IWatchFacesListPresenter?
 
+    /* Значение высоты collectionView групп */
+    var groupCollectionViewHeight: CGFloat {
+        guard let tableHeaderView = mainView.tableHeaderView else { return 0.0 }
+        return tableHeaderView.categoriesCollectionView.contentSize.height + 16.0
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+                
         navBarConfig()
 
         configLeftMenu()
@@ -27,12 +34,23 @@ class WatchFacesListVC: UIViewController {
         mainView.tableHeaderView?.collectionView.dataSource = presenter
         mainView.tableHeaderView?.collectionView.delegate = presenter
         
-        let vc = WelcomeTourBuilder().build(screen: .first)
-        present(vc, animated: true, completion: nil)
+        mainView.tableHeaderView?.categoriesCollectionView.dataSource = presenter
+        mainView.tableHeaderView?.categoriesCollectionView.delegate = presenter
+                
+        addTargets()
+        
+        presenter?.getWatchList()
+        
+        //presenter?.presentWelcomeTour()
+        
     }
     
     override func loadView() {
         view = mainView
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
     }
     
     func setPresenter(_ presenter: IWatchFacesListPresenter) {
@@ -53,9 +71,44 @@ class WatchFacesListVC: UIViewController {
         navigationController?.navigationBar.tintColor = UIColor(named: "darkTextColor")
     }
     
+    func addTargets() {
+        mainView.tableHeaderView?.addCategoriesTarget(target: self, action: #selector(categoriesBtnPressed))
+    }
+    
     @objc
     func leftMenuBtnPressed() {
         presenter?.presentMenu()
+    }
+    
+    @objc
+    func categoriesBtnPressed() {
+        presenter?.categoriesBtnPressed()
+    }
+    
+    func categoriesOpenedState() {
+        mainView.tableHeaderView?.categoriesOpenedState()
+        
+        mainView.tableView.beginUpdates()
+        
+        UIView.animate(withDuration: 0.3) {
+            self.mainView.tableView.tableHeaderView?.frame.size.height += self.groupCollectionViewHeight
+            self.mainView.tableView.tableHeaderView?.layoutIfNeeded()
+        }
+        
+        mainView.tableView.endUpdates()
+    }
+    
+    func categoriesHiddenState() {
+        mainView.tableHeaderView?.categoriesHiddenState()
+        
+        mainView.tableView.beginUpdates()
+
+        UIView.animate(withDuration: 0.3) {
+            self.mainView.tableView.tableHeaderView?.frame.size.height -= self.groupCollectionViewHeight
+            self.mainView.tableView.tableHeaderView?.layoutIfNeeded()
+        }
+        
+        mainView.tableView.endUpdates()
     }
 }
 

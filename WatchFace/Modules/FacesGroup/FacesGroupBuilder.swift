@@ -9,7 +9,7 @@ import UIKit
 
 class FacesGroupBuilder: NSObject {
 
-    func build() -> UIViewController {
+    func build(category: WatchCategory) -> UIViewController {
         let vc = FacesGroupVC()
         
         let router = FacesGroupRouter(view: vc)
@@ -17,6 +17,7 @@ class FacesGroupBuilder: NSObject {
         let presenter = FacesGroupPresenter(view: vc, router: router, interactor: interactor)
         
         vc.setPresenter(presenter)
+        presenter.setCategory(category)
         
         return vc
     }

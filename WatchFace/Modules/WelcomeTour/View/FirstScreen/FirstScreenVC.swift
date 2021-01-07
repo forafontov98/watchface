@@ -19,7 +19,7 @@ class FirstScreenVC: UIViewController {
 
     init() {
         super.init(nibName: nil, bundle: nil)
-        modalPresentationStyle = .overFullScreen
+        modalPresentationStyle = .fullScreen
         
         hero.isEnabled = true
     }
@@ -31,6 +31,7 @@ class FirstScreenVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        addTargets()
         heroViewsConfig()
     }
     
@@ -38,12 +39,19 @@ class FirstScreenVC: UIViewController {
         view = mainView
     }
     
+    @objc
+    func nextBtnPressed() {
+        presenter?.presentSecondScreen()
+    }
+    
+    private func addTargets() {
+        mainView.addNextBtnTarget(target: self, action: #selector(nextBtnPressed))
+    }
+}
+
+extension FirstScreenVC {
     private func heroViewsConfig() {
-        
-        /*
-        mainView.imageView.heroModifiers = [.whenAppearing(.translate(y: -150.0), .fade, .delay(0.1)),
-                                           .whenDisappearing(.translate(y: -150.0), .fade, .delay(0.4))]
-        */
+
         mainView.topLabel.heroModifiers = [.whenAppearing(.translate(x: -150.0), .fade, .delay(0.2)),
                                            .whenDisappearing(.translate(x: -150.0), .fade, .delay(0.5))]
         

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 extension NSObject {
     var className: String {
@@ -37,5 +38,44 @@ extension UICollectionViewCell {
         }
         
         return superView.indexPath(for: self)
+    }
+}
+
+extension UIImageView {
+    
+    func loadImageWithKingFisher(for urlString: String) {
+        
+        self.kf.cancelDownloadTask()
+        
+        guard let url = URL(string: urlString.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)!) else {
+            self.image = nil
+            return
+        }
+        
+        let resourse = ImageResource(downloadURL: url, cacheKey: urlString)
+        
+        let cache = ImageCache.default
+        
+        if cache.isCached(forKey: urlString) {
+
+            self.kf.setImage(
+            with: resourse,
+            placeholder: self.image,
+            options: [
+                .onlyFromCache
+            ])
+
+        } else {
+
+            self.kf.setImage(
+            with: resourse,
+            placeholder: self.image,
+            options: [
+                .transition(.fade(0.2)),
+                .forceTransition,
+                .keepCurrentImageWhileLoading
+            ])
+
+        }
     }
 }

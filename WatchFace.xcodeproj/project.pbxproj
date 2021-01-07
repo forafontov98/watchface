@@ -37,6 +37,26 @@
 		FA4C47782580B98000119A1F /* FacesGroupInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4C47772580B98000119A1F /* FacesGroupInteractor.swift */; };
 		FA4C477B2580B9A100119A1F /* FacesGroupRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4C477A2580B9A100119A1F /* FacesGroupRouter.swift */; };
 		FA4C477E2580B9E900119A1F /* FacesGroupBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4C477D2580B9E900119A1F /* FacesGroupBuilder.swift */; };
+		FA7F1C6A259B2DD600ECECD3 /* HttpRequestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F1C67259B2DD600ECECD3 /* HttpRequestData.swift */; };
+		FA7F1C6B259B2DD600ECECD3 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F1C68259B2DD600ECECD3 /* Result.swift */; };
+		FA7F1C6C259B2DD600ECECD3 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F1C69259B2DD600ECECD3 /* HttpClient.swift */; };
+		FA7F1C71259B2E7B00ECECD3 /* WatchListBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F1C70259B2E7B00ECECD3 /* WatchListBuilder.swift */; };
+		FA7F1C75259B2E8800ECECD3 /* WatchListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F1C74259B2E8800ECECD3 /* WatchListService.swift */; };
+		FA7F1C78259B2F9600ECECD3 /* WatchList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F1C77259B2F9600ECECD3 /* WatchList.swift */; };
+		FA7F1C8425A1D9DE00ECECD3 /* WebViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F1C8325A1D9DE00ECECD3 /* WebViewVC.swift */; };
+		FA7F1C8725A1D9F900ECECD3 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F1C8625A1D9F900ECECD3 /* WebView.swift */; };
+		FA7F1C8A25A1DA1600ECECD3 /* WebViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F1C8925A1DA1600ECECD3 /* WebViewInteractor.swift */; };
+		FA7F1C8D25A1DA2200ECECD3 /* WebViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F1C8C25A1DA2200ECECD3 /* WebViewPresenter.swift */; };
+		FA7F1C9025A1DA2D00ECECD3 /* WebViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F1C8F25A1DA2D00ECECD3 /* WebViewRouter.swift */; };
+		FA7F1C9325A1DA3400ECECD3 /* WebViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F1C9225A1DA3400ECECD3 /* WebViewBuilder.swift */; };
+		FA7F1C9825A1E74200ECECD3 /* AppStoreReviewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F1C9725A1E74200ECECD3 /* AppStoreReviewManager.swift */; };
+		FA7F1C9B25A1E81C00ECECD3 /* LeftMenuInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F1C9A25A1E81C00ECECD3 /* LeftMenuInteractor.swift */; };
+		FA7F1CC525A5AA3A00ECECD3 /* SpinnerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F1CC425A5AA3A00ECECD3 /* SpinnerVC.swift */; };
+		FA7F1CCA25A5AA4E00ECECD3 /* SpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F1CC925A5AA4E00ECECD3 /* SpinnerView.swift */; };
+		FA7F1CCE25A5B12F00ECECD3 /* LoadingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F1CCD25A5B12F00ECECD3 /* LoadingButton.swift */; };
+		FA7F1CE325A5CB3000ECECD3 /* SetWatchAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F1CE225A5CB3000ECECD3 /* SetWatchAC.swift */; };
+		FA7F1CF825A709BE00ECECD3 /* SwiftyStoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F1CF725A709BE00ECECD3 /* SwiftyStoreService.swift */; };
+		FA7F1D0225A7199F00ECECD3 /* GroupCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F1D0125A7199F00ECECD3 /* GroupCVC.swift */; };
 		FAA95DB2258215C80028B4D4 /* WatchPreviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA95DB1258215C80028B4D4 /* WatchPreviewVC.swift */; };
 		FAA95DB5258215D80028B4D4 /* WatchPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA95DB4258215D80028B4D4 /* WatchPreviewView.swift */; };
 		FAA95DB8258215F90028B4D4 /* WatchPreviewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA95DB7258215F90028B4D4 /* WatchPreviewBuilder.swift */; };
@@ -57,6 +77,8 @@
 		FAA95E0D258373E40028B4D4 /* WelcomeTourRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA95E0C258373E40028B4D4 /* WelcomeTourRouter.swift */; };
 		FAA95E10258373EA0028B4D4 /* WelcomeTourBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA95E0F258373EA0028B4D4 /* WelcomeTourBuilder.swift */; };
 		FAA95E1325837B350028B4D4 /* FirstScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA95E1225837B350028B4D4 /* FirstScreenView.swift */; };
+		FAF9095B25853D670037B372 /* SecondScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF9095A25853D670037B372 /* SecondScreenView.swift */; };
+		FAF9095E258546B60037B372 /* ThirdScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF9095D258546B60037B372 /* ThirdScreenView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +116,26 @@
 		FA4C47772580B98000119A1F /* FacesGroupInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacesGroupInteractor.swift; sourceTree = "<group>"; };
 		FA4C477A2580B9A100119A1F /* FacesGroupRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacesGroupRouter.swift; sourceTree = "<group>"; };
 		FA4C477D2580B9E900119A1F /* FacesGroupBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacesGroupBuilder.swift; sourceTree = "<group>"; };
+		FA7F1C67259B2DD600ECECD3 /* HttpRequestData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpRequestData.swift; sourceTree = "<group>"; };
+		FA7F1C68259B2DD600ECECD3 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		FA7F1C69259B2DD600ECECD3 /* HttpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
+		FA7F1C70259B2E7B00ECECD3 /* WatchListBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListBuilder.swift; sourceTree = "<group>"; };
+		FA7F1C74259B2E8800ECECD3 /* WatchListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListService.swift; sourceTree = "<group>"; };
+		FA7F1C77259B2F9600ECECD3 /* WatchList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchList.swift; sourceTree = "<group>"; };
+		FA7F1C8325A1D9DE00ECECD3 /* WebViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewVC.swift; sourceTree = "<group>"; };
+		FA7F1C8625A1D9F900ECECD3 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		FA7F1C8925A1DA1600ECECD3 /* WebViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewInteractor.swift; sourceTree = "<group>"; };
+		FA7F1C8C25A1DA2200ECECD3 /* WebViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewPresenter.swift; sourceTree = "<group>"; };
+		FA7F1C8F25A1DA2D00ECECD3 /* WebViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewRouter.swift; sourceTree = "<group>"; };
+		FA7F1C9225A1DA3400ECECD3 /* WebViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewBuilder.swift; sourceTree = "<group>"; };
+		FA7F1C9725A1E74200ECECD3 /* AppStoreReviewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreReviewManager.swift; sourceTree = "<group>"; };
+		FA7F1C9A25A1E81C00ECECD3 /* LeftMenuInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftMenuInteractor.swift; sourceTree = "<group>"; };
+		FA7F1CC425A5AA3A00ECECD3 /* SpinnerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerVC.swift; sourceTree = "<group>"; };
+		FA7F1CC925A5AA4E00ECECD3 /* SpinnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerView.swift; sourceTree = "<group>"; };
+		FA7F1CCD25A5B12F00ECECD3 /* LoadingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingButton.swift; sourceTree = "<group>"; };
+		FA7F1CE225A5CB3000ECECD3 /* SetWatchAC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetWatchAC.swift; sourceTree = "<group>"; };
+		FA7F1CF725A709BE00ECECD3 /* SwiftyStoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyStoreService.swift; sourceTree = "<group>"; };
+		FA7F1D0125A7199F00ECECD3 /* GroupCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCVC.swift; sourceTree = "<group>"; };
 		FAA95DB1258215C80028B4D4 /* WatchPreviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchPreviewVC.swift; sourceTree = "<group>"; };
 		FAA95DB4258215D80028B4D4 /* WatchPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchPreviewView.swift; sourceTree = "<group>"; };
 		FAA95DB7258215F90028B4D4 /* WatchPreviewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchPreviewBuilder.swift; sourceTree = "<group>"; };
@@ -114,6 +156,8 @@
 		FAA95E0C258373E40028B4D4 /* WelcomeTourRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeTourRouter.swift; sourceTree = "<group>"; };
 		FAA95E0F258373EA0028B4D4 /* WelcomeTourBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeTourBuilder.swift; sourceTree = "<group>"; };
 		FAA95E1225837B350028B4D4 /* FirstScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreenView.swift; sourceTree = "<group>"; };
+		FAF9095A25853D670037B372 /* SecondScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondScreenView.swift; sourceTree = "<group>"; };
+		FAF9095D258546B60037B372 /* ThirdScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdScreenView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +210,7 @@
 		FA4C46F3257F8B4600119A1F /* WatchFace */ = {
 			isa = PBXGroup;
 			children = (
+				FA7F1CCC25A5B11000ECECD3 /* UIElements */,
 				FA4C470E257F8BD300119A1F /* Application */,
 				FA4C4710257F8BE700119A1F /* Modules */,
 				FA4C4712257F8BFB00119A1F /* Services */,
@@ -189,6 +234,8 @@
 		FA4C4710257F8BE700119A1F /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				FA7F1CC325A5AA1600ECECD3 /* Spinner */,
+				FA7F1C8125A1D9BB00ECECD3 /* WebView */,
 				FA4C474D2580A6D300119A1F /* LeftMenu */,
 				FAA95DF8258372CF0028B4D4 /* WelcomeTour */,
 				FA4C4716257F8E5300119A1F /* FacesList */,
@@ -202,6 +249,9 @@
 		FA4C4712257F8BFB00119A1F /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				FA7F1C66259B2DD600ECECD3 /* HTTP */,
+				FA7F1C6F259B2E6300ECECD3 /* WatchListService */,
+				FA7F1CF625A709A000ECECD3 /* SwiftyStoreService */,
 				FA4C4738257F9E5A00119A1F /* Extensions.swift */,
 			);
 			path = Services;
@@ -210,6 +260,8 @@
 		FA4C4713257F8C0700119A1F /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				FA7F1C77259B2F9600ECECD3 /* WatchList.swift */,
+				FA7F1C9725A1E74200ECECD3 /* AppStoreReviewManager.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -242,6 +294,7 @@
 				FA4C4733257F9E1300119A1F /* TopWatchFaceCVC.swift */,
 				FA4C473C257FAA4E00119A1F /* CategoryTVC.swift */,
 				FA4C473F257FADDB00119A1F /* WatchFaceCVC.swift */,
+				FA7F1D0125A7199F00ECECD3 /* GroupCVC.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -259,6 +312,7 @@
 			isa = PBXGroup;
 			children = (
 				FA4C474E2580A6E800119A1F /* View */,
+				FA7F1C9A25A1E81C00ECECD3 /* LeftMenuInteractor.swift */,
 				FA4C47642580AD4C00119A1F /* LeftMenuPresenter.swift */,
 				FA4C47562580A76C00119A1F /* LeftMenuRouter.swift */,
 				FA4C47592580A77400119A1F /* LeftMenuBuilder.swift */,
@@ -315,6 +369,71 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		FA7F1C66259B2DD600ECECD3 /* HTTP */ = {
+			isa = PBXGroup;
+			children = (
+				FA7F1C67259B2DD600ECECD3 /* HttpRequestData.swift */,
+				FA7F1C68259B2DD600ECECD3 /* Result.swift */,
+				FA7F1C69259B2DD600ECECD3 /* HttpClient.swift */,
+			);
+			path = HTTP;
+			sourceTree = "<group>";
+		};
+		FA7F1C6F259B2E6300ECECD3 /* WatchListService */ = {
+			isa = PBXGroup;
+			children = (
+				FA7F1C70259B2E7B00ECECD3 /* WatchListBuilder.swift */,
+				FA7F1C74259B2E8800ECECD3 /* WatchListService.swift */,
+			);
+			path = WatchListService;
+			sourceTree = "<group>";
+		};
+		FA7F1C8125A1D9BB00ECECD3 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				FA7F1C8225A1D9CA00ECECD3 /* View */,
+				FA7F1C8925A1DA1600ECECD3 /* WebViewInteractor.swift */,
+				FA7F1C8C25A1DA2200ECECD3 /* WebViewPresenter.swift */,
+				FA7F1C8F25A1DA2D00ECECD3 /* WebViewRouter.swift */,
+				FA7F1C9225A1DA3400ECECD3 /* WebViewBuilder.swift */,
+			);
+			path = WebView;
+			sourceTree = "<group>";
+		};
+		FA7F1C8225A1D9CA00ECECD3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA7F1C8325A1D9DE00ECECD3 /* WebViewVC.swift */,
+				FA7F1C8625A1D9F900ECECD3 /* WebView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FA7F1CC325A5AA1600ECECD3 /* Spinner */ = {
+			isa = PBXGroup;
+			children = (
+				FA7F1CC425A5AA3A00ECECD3 /* SpinnerVC.swift */,
+				FA7F1CC925A5AA4E00ECECD3 /* SpinnerView.swift */,
+			);
+			path = Spinner;
+			sourceTree = "<group>";
+		};
+		FA7F1CCC25A5B11000ECECD3 /* UIElements */ = {
+			isa = PBXGroup;
+			children = (
+				FA7F1CCD25A5B12F00ECECD3 /* LoadingButton.swift */,
+			);
+			path = UIElements;
+			sourceTree = "<group>";
+		};
+		FA7F1CF625A709A000ECECD3 /* SwiftyStoreService */ = {
+			isa = PBXGroup;
+			children = (
+				FA7F1CF725A709BE00ECECD3 /* SwiftyStoreService.swift */,
+			);
+			path = SwiftyStoreService;
+			sourceTree = "<group>";
+		};
 		FAA95DAF2582159F0028B4D4 /* WatchPreview */ = {
 			isa = PBXGroup;
 			children = (
@@ -332,6 +451,7 @@
 			children = (
 				FAA95DB1258215C80028B4D4 /* WatchPreviewVC.swift */,
 				FAA95DB4258215D80028B4D4 /* WatchPreviewView.swift */,
+				FA7F1CE225A5CB3000ECECD3 /* SetWatchAC.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -392,6 +512,7 @@
 			isa = PBXGroup;
 			children = (
 				FAA95E00258373990028B4D4 /* SecondScreenVC.swift */,
+				FAF9095A25853D670037B372 /* SecondScreenView.swift */,
 			);
 			path = SecondScreen;
 			sourceTree = "<group>";
@@ -400,6 +521,7 @@
 			isa = PBXGroup;
 			children = (
 				FAA95E03258373A40028B4D4 /* ThirdScreenVC.swift */,
+				FAF9095D258546B60037B372 /* ThirdScreenView.swift */,
 			);
 			path = ThirdScreen;
 			sourceTree = "<group>";
@@ -412,6 +534,7 @@
 			buildConfigurationList = FA4C4705257F8B4A00119A1F /* Build configuration list for PBXNativeTarget "WatchFace" */;
 			buildPhases = (
 				4D3A4F5E98960BFF521FBB10 /* [CP] Check Pods Manifest.lock */,
+				772F825669411CF717ABF117 /* [CP] Prepare Artifacts */,
 				FA4C46ED257F8B4600119A1F /* Sources */,
 				FA4C46EE257F8B4600119A1F /* Frameworks */,
 				FA4C46EF257F8B4600119A1F /* Resources */,
@@ -510,6 +633,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		772F825669411CF717ABF117 /* [CP] Prepare Artifacts */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WatchFace/Pods-WatchFace-artifacts-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Prepare Artifacts";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WatchFace/Pods-WatchFace-artifacts-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WatchFace/Pods-WatchFace-artifacts.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -517,10 +657,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA7F1C9025A1DA2D00ECECD3 /* WebViewRouter.swift in Sources */,
+				FA7F1CCA25A5AA4E00ECECD3 /* SpinnerView.swift in Sources */,
 				FA4C47602580AB1900119A1F /* LeftMenuTopView.swift in Sources */,
 				FA4C47782580B98000119A1F /* FacesGroupInteractor.swift in Sources */,
 				FA4C476F2580B83D00119A1F /* FacesGroupVC.swift in Sources */,
 				FA4C477B2580B9A100119A1F /* FacesGroupRouter.swift in Sources */,
+				FA7F1CCE25A5B12F00ECECD3 /* LoadingButton.swift in Sources */,
 				FA4C47572580A76C00119A1F /* LeftMenuRouter.swift in Sources */,
 				FAA95DF5258360BC0028B4D4 /* LockingScreenBuilder.swift in Sources */,
 				FA4C47752580B94800119A1F /* FacesGroupPresenter.swift in Sources */,
@@ -533,6 +676,7 @@
 				FA4C4734257F9E1300119A1F /* TopWatchFaceCVC.swift in Sources */,
 				FAA95DB5258215D80028B4D4 /* WatchPreviewView.swift in Sources */,
 				FA4C47692580AF4A00119A1F /* LeftMenuTVC.swift in Sources */,
+				FA7F1CE325A5CB3000ECECD3 /* SetWatchAC.swift in Sources */,
 				FA4C47542580A72100119A1F /* LeftMenuView.swift in Sources */,
 				FA4C475D2580A8DB00119A1F /* LeftMenuNVC.swift in Sources */,
 				FAA95E1325837B350028B4D4 /* FirstScreenView.swift in Sources */,
@@ -541,6 +685,8 @@
 				FAA95DEC258360A30028B4D4 /* LockingScreenInteractor.swift in Sources */,
 				FA4C4728257F8EE200119A1F /* WatchFacesListRouter.swift in Sources */,
 				FAA95DBB258216020028B4D4 /* WatchPreviewInteractor.swift in Sources */,
+				FA7F1C9325A1DA3400ECECD3 /* WebViewBuilder.swift in Sources */,
+				FAF9095B25853D670037B372 /* SecondScreenView.swift in Sources */,
 				FA4C472B257F8EEF00119A1F /* WatchFacesListBuilder.swift in Sources */,
 				FAA95E04258373A40028B4D4 /* ThirdScreenVC.swift in Sources */,
 				FA4C472E257F94A200119A1F /* WatchFacesTopView.swift in Sources */,
@@ -548,22 +694,38 @@
 				FA4C46F7257F8B4600119A1F /* SceneDelegate.swift in Sources */,
 				FA4C4719257F8E9F00119A1F /* WatchFacesListVC.swift in Sources */,
 				FA4C4725257F8EDA00119A1F /* WatchFacesListPresenter.swift in Sources */,
+				FA7F1CC525A5AA3A00ECECD3 /* SpinnerVC.swift in Sources */,
 				FA4C475A2580A77400119A1F /* LeftMenuBuilder.swift in Sources */,
+				FA7F1CF825A709BE00ECECD3 /* SwiftyStoreService.swift in Sources */,
+				FA7F1C75259B2E8800ECECD3 /* WatchListService.swift in Sources */,
+				FA7F1C9B25A1E81C00ECECD3 /* LeftMenuInteractor.swift in Sources */,
+				FA7F1C71259B2E7B00ECECD3 /* WatchListBuilder.swift in Sources */,
 				FAA95DEF258360AE0028B4D4 /* LockingScreenPresenter.swift in Sources */,
+				FA7F1C78259B2F9600ECECD3 /* WatchList.swift in Sources */,
+				FAF9095E258546B60037B372 /* ThirdScreenView.swift in Sources */,
+				FA7F1C8A25A1DA1600ECECD3 /* WebViewInteractor.swift in Sources */,
 				FAA95E01258373990028B4D4 /* SecondScreenVC.swift in Sources */,
 				FAA95E07258373D30028B4D4 /* WelcomeTourInteractor.swift in Sources */,
 				FAA95DB8258215F90028B4D4 /* WatchPreviewBuilder.swift in Sources */,
 				FAA95E0D258373E40028B4D4 /* WelcomeTourRouter.swift in Sources */,
 				FAA95E0A258373DD0028B4D4 /* WelcomeTourPresenter.swift in Sources */,
+				FA7F1C8D25A1DA2200ECECD3 /* WebViewPresenter.swift in Sources */,
+				FA7F1C9825A1E74200ECECD3 /* AppStoreReviewManager.swift in Sources */,
 				FA4C47502580A70000119A1F /* LeftMenuVC.swift in Sources */,
 				FA4C4739257F9E5A00119A1F /* Extensions.swift in Sources */,
 				FA4C4721257F8ECF00119A1F /* WatchFacesListInteractor.swift in Sources */,
 				FAA95E10258373EA0028B4D4 /* WelcomeTourBuilder.swift in Sources */,
 				FAA95DC1258216120028B4D4 /* WatchPreviewRouter.swift in Sources */,
 				FAA95DF2258360B60028B4D4 /* LockingScreenRouter.swift in Sources */,
+				FA7F1D0225A7199F00ECECD3 /* GroupCVC.swift in Sources */,
+				FA7F1C6C259B2DD600ECECD3 /* HttpClient.swift in Sources */,
 				FA4C473D257FAA4E00119A1F /* CategoryTVC.swift in Sources */,
+				FA7F1C8725A1D9F900ECECD3 /* WebView.swift in Sources */,
 				FA4C477E2580B9E900119A1F /* FacesGroupBuilder.swift in Sources */,
+				FA7F1C8425A1D9DE00ECECD3 /* WebViewVC.swift in Sources */,
+				FA7F1C6B259B2DD600ECECD3 /* Result.swift in Sources */,
 				FAA95DE92583608F0028B4D4 /* LockingScreenView.swift in Sources */,
+				FA7F1C6A259B2DD600ECECD3 /* HttpRequestData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -704,16 +866,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GYMF6NUDH3;
+				DEVELOPMENT_TEAM = C7DM2K66H7;
 				INFOPLIST_FILE = "$(SRCROOT)/WatchFace/Application/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = forafontov.WatchFace;
+				PRODUCT_BUNDLE_IDENTIFIER = com.watch.faces;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -724,16 +887,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GYMF6NUDH3;
+				DEVELOPMENT_TEAM = C7DM2K66H7;
 				INFOPLIST_FILE = "$(SRCROOT)/WatchFace/Application/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = forafontov.WatchFace;
+				PRODUCT_BUNDLE_IDENTIFIER = com.watch.faces;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -15,6 +15,9 @@ protocol IWatchPreviewPresenter {
     func beganPanGesture(translation: CGPoint)
     func changePanGesture(translation: CGPoint, progress: CGFloat)
     func endPanGesture(progress: CGFloat, velocity: CGPoint)
+    
+    var watchFace: WatchFace? { get set }
+
 }
 
 class WatchPreviewPresenter: NSObject, IWatchPreviewPresenter {
@@ -23,6 +26,8 @@ class WatchPreviewPresenter: NSObject, IWatchPreviewPresenter {
     private var router: IWatchPreviewRouter?
     private var interactor: IWatchPreviewInteractor?
     
+    var watchFace: WatchFace?
+
     init(view: WatchPreviewVC, router: IWatchPreviewRouter, interactor: IWatchPreviewInteractor) {
         self.view = view
         self.router = router
@@ -34,7 +39,11 @@ class WatchPreviewPresenter: NSObject, IWatchPreviewPresenter {
     }
     
     func downloadBtnPressed() {
-        router?.presentLockingScreen()
+        if let watchFace = watchFace, watchFace.status == .free {
+            router?.presentAlertController(delegate: self)
+        } else {
+            router?.presentLockingScreen(delegate: self)
+        }
     }
     
     func beganPanGesture(translation: CGPoint) {
@@ -51,5 +60,24 @@ class WatchPreviewPresenter: NSObject, IWatchPreviewPresenter {
     
     func endPanGesture(progress: CGFloat, velocity: CGPoint) {
         router?.endPanGesture(progress: progress, velocity: velocity)
+    }
+}
+
+extension WatchPreviewPresenter: SetWatchACDelegate {
+    func notShowAgain() {
+        
+    }
+    
+    func gotIt() {
+        router?.share(watchFace: view!.mainView.imageView.image!)
+    }
+}
+
+extension WatchPreviewPresenter: LockingScreenPresenterDelegate {
+    func adWatched() {
+        watchFace?.status = .free
+        
+        view?.mainView.lockIcon.isHidden = true
+        router?.presentAlertController(delegate: self)
     }
 }

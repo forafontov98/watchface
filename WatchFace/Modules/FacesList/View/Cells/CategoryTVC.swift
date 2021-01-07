@@ -6,9 +6,11 @@
 //
 
 import UIKit
+import SkeletonView
 
 protocol CategoryTVCDelegate: class {
     func showAllBtnPressed(_ indexPath: IndexPath)
+    func watchPreviewPressed(indexPath: IndexPath, _ watch: WatchFace)
 }
 
 class CategoryTVC: UITableViewCell {
@@ -18,7 +20,6 @@ class CategoryTVC: UITableViewCell {
     private (set) var nameLabel: UILabel = {
         let label = UILabel()
         label.textColor = UIColor(named: "darkTextColor")
-        label.text = "Category"
         label.font = .systemFont(ofSize: 17.0, weight: .semibold)
         label.numberOfLines = 1
         return label
@@ -51,11 +52,29 @@ class CategoryTVC: UITableViewCell {
         return cv
     }()
     
+    var watchCategory: WatchCategory? {
+        didSet {
+            guard let watchCategory = watchCategory else { return }
+            
+            nameLabel.text = watchCategory.name
+            collectionView.reloadData()
+
+        }
+    }
+    
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         
         makeConstraints()
         addTargets()
+        
+        //isSkeletonable = true
+        //nameLabel.isSkeletonable = true
+        //collectionView.isSkeletonable = true
+        
+        collectionView.dataSource = self
+        collectionView.delegate = self
+
     }
     
     func addTargets() {
@@ -95,5 +114,33 @@ class CategoryTVC: UITableViewCell {
         if let indexPath = indexPath {
             delegate?.showAllBtnPressed(indexPath)
         }
+    }
+}
+
+extension CategoryTVC: UICollectionViewDataSource, UICollectionViewDelegate {
+
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if let category = watchCategory {
+            return category.watches.count > 5 ? 5 : category.watches.count
+        } else {
+            return 0
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: WatchFaceCVC.className, for: indexPath) as! WatchFaceCVC
+        
+        cell.watch = watchCategory?.watches[indexPath.row]
+        //cell.isSkeletonable = true
+        
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let watch = watchCategory?.watches[indexPath.row], let ip = self.indexPath {
+            delegate?.watchPreviewPressed(indexPath: ip, watch)
+        }
+        
+        UIImpactFeedbackGenerator(style: .light).impactOccurred()
     }
 }

@@ -42,11 +42,12 @@ class FirstScreenView: UIView {
     }()
     
     private (set) var nextBtn: UIButton = {
-        let button = UIButton()
+        let button = UIButton(type: .system)
         button.layer.masksToBounds = true
         button.layer.cornerRadius = 12.0
         button.backgroundColor = UIColor(named: "baseBlue")
         button.setTitle("Далее", for: .normal)
+        button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 20.0, weight: .semibold)
         return button
     }()
@@ -57,9 +58,7 @@ class FirstScreenView: UIView {
         pageControl.currentPage = 0
         pageControl.currentPageIndicatorTintColor = UIColor(named: "baseBlue")
         pageControl.pageIndicatorTintColor = UIColor.lightGray.withAlphaComponent(0.2)
-        
-        pageControl.heroID = "page_control"
-        
+                
         return pageControl
     }()
     
@@ -81,7 +80,7 @@ class FirstScreenView: UIView {
         
         imageView.snp.makeConstraints {
             $0.left.right.top.equalToSuperview()
-            $0.height.equalToSuperview().multipliedBy(0.67)
+            $0.height.equalToSuperview().multipliedBy(0.6)
         }
         
         addSubview(topLabel)
@@ -111,8 +110,8 @@ class FirstScreenView: UIView {
         
         pageControl.snp.makeConstraints {
             $0.centerX.equalToSuperview()
-            $0.bottom.equalTo(self.snp.bottomMargin).offset(-16.0)
-            $0.height.equalTo(12.0)
+            $0.bottom.equalTo(self.snp.bottomMargin).offset(-8.0)
+            $0.height.equalTo(10.0)
         }
         
         addSubview(nextBtn)
@@ -120,9 +119,16 @@ class FirstScreenView: UIView {
         nextBtn.snp.makeConstraints {
             $0.left.equalToSuperview().offset(20.0)
             $0.right.equalToSuperview().offset(-20.0)
-            $0.height.equalTo(64.0)
-            $0.bottom.equalTo(self.pageControl.snp.top).offset(-25.0)
+            $0.height.equalTo(self.snp.height).multipliedBy(0.089)
+            $0.bottom.equalTo(self.pageControl.snp.top).offset(-16.0)
         }
     }
     
+}
+
+extension FirstScreenView {
+    
+    func addNextBtnTarget(target: Any?, action: Selector) {
+        nextBtn.addTarget(target, action: action, for: .touchUpInside)
+    }
 }

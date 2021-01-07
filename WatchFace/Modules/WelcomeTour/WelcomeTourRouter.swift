@@ -10,6 +10,12 @@ import UIKit
 protocol IWelcomeTourRouter {
     func presentSecondScreen()
     func presentThirdScreen()
+    
+    func dismissToRoot()
+    func dismiss()
+    
+    func presentPrivacyScreen()
+    func presentTermsScreen()
 }
 
 class WelcomeTourRouter: NSObject, IWelcomeTourRouter {
@@ -27,6 +33,27 @@ class WelcomeTourRouter: NSObject, IWelcomeTourRouter {
     
     func presentThirdScreen() {
         let vc = WelcomeTourBuilder().build(screen: .third)
+        view?.present(vc, animated: true, completion: nil)
+    }
+    
+    func dismissToRoot() {
+        view?.hero_unwindToRootViewController()
+    }
+    
+    func dismiss() {
+        view?.dismiss(animated: true, completion: nil)
+    }
+    
+    func presentPrivacyScreen() {
+        presentWebView(url: "https://www.watch-faces.org/privacy.html")
+    }
+    
+    func presentTermsScreen() {
+        presentWebView(url: "https://www.watch-faces.org/terms.html")
+    }
+    
+    private func presentWebView(url: String) {
+        let vc = WebViewBuilder().build(url: url)
         view?.present(vc, animated: true, completion: nil)
     }
 }

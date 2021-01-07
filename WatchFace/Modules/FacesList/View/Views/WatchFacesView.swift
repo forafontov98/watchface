@@ -20,7 +20,7 @@ class WatchFacesView: UIView {
         
         tableView.tableHeaderView = WatchFacesTopView()
         tableView.tableHeaderView?.frame.size.height = 340.0
-        
+                
         return tableView
     }()
     
@@ -37,9 +37,13 @@ class WatchFacesView: UIView {
     init() {
         super.init(frame: .zero)
         
+        isSkeletonable = true
+        //tableView.isSkeletonable = true
+
         backgroundColor = .white
         
         makeConstraints()
+        
     }
     
     required init?(coder: NSCoder) {

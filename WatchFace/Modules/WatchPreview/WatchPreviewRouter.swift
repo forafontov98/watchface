@@ -10,11 +10,14 @@ import Hero
 
 protocol IWatchPreviewRouter {
     func dismiss()
-    func presentLockingScreen()
-    
+    func presentLockingScreen(delegate: LockingScreenPresenterDelegate?)
+
     func beganPanGesture(translation: CGPoint)
     func changePanGesture(translation: CGPoint, progress: CGFloat)
     func endPanGesture(progress: CGFloat, velocity: CGPoint)
+    
+    func presentAlertController(delegate: SetWatchACDelegate)
+    func share(watchFace: UIImage)
 }
 
 class WatchPreviewRouter: NSObject, IWatchPreviewRouter {
@@ -29,8 +32,8 @@ class WatchPreviewRouter: NSObject, IWatchPreviewRouter {
         view?.dismiss(animated: true, completion: nil)
     }
     
-    func presentLockingScreen() {
-        let vc = LockingScreenBuilder().build()
+    func presentLockingScreen(delegate: LockingScreenPresenterDelegate?) {
+        let vc = LockingScreenBuilder().build(delegate: delegate)
         view?.present(vc, animated: true, completion: nil)
     }
     
@@ -55,5 +58,23 @@ class WatchPreviewRouter: NSObject, IWatchPreviewRouter {
         } else {
             Hero.shared.cancel()
         }
+    }
+    
+    func presentAlertController(delegate: SetWatchACDelegate) {
+        
+        let ac = SetWatchAC(title: "Найдите строку \"Create Watch Face\"\n\n\n\n",
+                            message: nil,
+                            preferredStyle: .actionSheet)
+        
+        ac.delegate = delegate
+        
+        view?.present(ac, animated: true, completion: nil)
+    }
+    
+    func share(watchFace: UIImage) {
+        let activityViewController = UIActivityViewController(activityItems: [watchFace],
+                                                              applicationActivities: nil)
+        
+        self.view?.present(activityViewController, animated: true, completion: nil)
     }
 }

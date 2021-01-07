@@ -34,12 +34,37 @@ class WatchPreviewView: UIView {
     
     private (set) var imageView: UIImageView = {
         let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFill
+        imageView.layer.masksToBounds = true
+        return imageView
+    }()
+    
+    private (set) var dateLabel: UILabel = {
+        let label = UILabel()
+        label.textColor = .white
+        label.font = .systemFont(ofSize: 20.0, weight: .medium)
+        label.textAlignment = .right
+        return label
+    }()
+    
+    private (set) var timeLabel: UILabel = {
+        let label = UILabel()
+        label.textColor = .white
+        label.font = .systemFont(ofSize: 50.0, weight: .regular)
+        label.textAlignment = .right
+        return label
+    }()
+    
+    private (set) var lockIcon: UIImageView = {
+        let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
+        imageView.image = UIImage(named: "mdi_lock")
         return imageView
     }()
     
     private (set) var downloadBtn: UIButton = {
-        let button = UIButton()
+        let button = UIButton(type: .system)
+        button.setTitleColor(.white, for: .normal)
         button.layer.masksToBounds = true
         button.layer.cornerRadius = 12.0
         button.backgroundColor = UIColor(named: "baseGreen")
@@ -58,7 +83,6 @@ class WatchPreviewView: UIView {
     init() {
         super.init(frame: .zero)
         
-        //backgroundColor = UIColor.white.withAlphaComponent(0.85)
         backgroundColor = .clear
         
         makeConstraints()
@@ -120,9 +144,42 @@ class WatchPreviewView: UIView {
         imageView.snp.makeConstraints {
             $0.left.equalToSuperview().offset(45.0)
             $0.right.equalToSuperview().offset(-45.0)
-            $0.top.equalTo(self.topLabel.snp.bottom).offset(45.0)
-            $0.bottom.equalTo(self.downloadBtn.snp.top).offset(-45.0)
+            $0.centerY.equalToSuperview()
+            $0.height.equalTo(self.imageView.snp.width).multipliedBy(1.21)
         }
+        
+        imageView.addSubview(dateLabel)
+        
+        dateLabel.snp.makeConstraints {
+            $0.top.equalToSuperview().offset(30.0)
+            $0.right.equalToSuperview().offset(-26.0)
+        }
+        
+        imageView.addSubview(timeLabel)
+        
+        timeLabel.snp.makeConstraints {
+            $0.top.equalTo(self.dateLabel.snp.bottom).offset(-3)
+            $0.right.equalToSuperview().offset(-26.0)
+        }
+        
+        addSubview(lockIcon)
+        
+        lockIcon.snp.makeConstraints {
+            $0.left.equalTo(imageView.snp.left).offset(80.0)
+            $0.right.equalTo(imageView.snp.right).offset(-80.0)
+            $0.bottom.equalTo(imageView.snp.bottom).offset(-30.0)
+            $0.height.equalTo(lockIcon.snp.width)
+        }
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        updateImageViewCornerRadius()
+    }
+    
+    private func updateImageViewCornerRadius() {
+        imageView.layer.cornerRadius = imageView.frame.height * 0.152
     }
 }
 
@@ -134,5 +191,19 @@ extension WatchPreviewView {
     
     func addDownloadBtnTarget(target: Any?, action: Selector) {
         downloadBtn.addTarget(target, action: action, for: .touchUpInside)
+    }
+}
+
+extension WatchPreviewView {
+    
+    func dateAndTimeConfig() {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "E, dd"
+        
+        dateLabel.text = dateFormatter.string(from: Date()).uppercased()
+        
+        dateFormatter.dateFormat = "HH:mm"
+        
+        timeLabel.text = dateFormatter.string(from: Date())
     }
 }

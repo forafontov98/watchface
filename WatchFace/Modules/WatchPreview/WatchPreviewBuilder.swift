@@ -9,15 +9,17 @@ import UIKit
 
 class WatchPreviewBuilder: NSObject {
 
-    func build(image: UIImage?) -> UIViewController {
+    func build(watch: WatchFace?, groupName: String?) -> UIViewController {
         let vc = WatchPreviewVC()
         
         let router = WatchPreviewRouter(view: vc)
         let interactor = WatchPreviewInteractor()
         let presenter = WatchPreviewPresenter(view: vc, router: router, interactor: interactor)
         
+        presenter.watchFace = watch
+        
         vc.setPresenter(presenter)
-        vc.setWatchFace(image)
+        vc.setGroupName(groupName)
         
         return vc
     }

@@ -15,10 +15,12 @@ class LeftMenuPresenter: NSObject, ILeftMenuPresenter {
 
     private weak var view: LeftMenuVC?
     private var router: ILeftMenuRouter?
+    private var interactor: ILeftMenuInteractor?
     
-    init(view: LeftMenuVC, router: ILeftMenuRouter) {
+    init(view: LeftMenuVC, router: ILeftMenuRouter, interactor: ILeftMenuInteractor) {
         self.view = view
         self.router = router
+        self.interactor = interactor
     }
     
     func cancelBtnPressed() {
@@ -40,6 +42,26 @@ extension LeftMenuPresenter {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        switch MenuItem.allCases[indexPath.row] {
+        case .about:
+            router?.presentAboutScreen()
+            
+        case .subscriptionInfo:
+            router?.presentSubscriptionInfoScreen()
+            
+        case .privacyPolicy:
+            router?.presentPrivacyScreen()
+            
+        case .rateTheApp:
+            interactor?.rateTheApp()
+            
+        case .support:
+            router?.presentSupportScreen()
+            
+        case .restorePurchases:
+            print("Restore purchases!")
+        }
     }
 }
 

@@ -47,8 +47,9 @@ class LockingScreenView: UIView {
         return label
     }()
     
-    private (set) var adBtn: UIButton = {
-        let button = UIButton()
+    private (set) var adBtn: LoadingButton = {
+        let button = LoadingButton(type: .system)
+        button.setTitleColor(.white, for: .normal)
         button.layer.cornerRadius = 12.0
         button.layer.masksToBounds = true
         button.backgroundColor = UIColor(named: "baseGreen")
@@ -58,7 +59,8 @@ class LockingScreenView: UIView {
     }()
     
     private (set) var subscriptionBtn: UIButton = {
-        let button = UIButton()
+        let button = UIButton(type: .system)
+        button.setTitleColor(.white, for: .normal)
         button.layer.cornerRadius = 12.0
         button.layer.masksToBounds = true
         button.backgroundColor = UIColor(named: "baseOrange")
@@ -138,10 +140,36 @@ class LockingScreenView: UIView {
         }
     }
     
+    var loadingState = false {
+        didSet {
+            if loadingState {
+                adBtn.load(true)
+                subscriptionBtn.alpha = 0.5
+                cancelBtn.alpha = 0.5
+                
+                isUserInteractionEnabled = false
+                
+            } else {
+                adBtn.load(false)
+                subscriptionBtn.alpha = 1.0
+                cancelBtn.alpha = 1.0
+                
+                isUserInteractionEnabled = true
+            }
+        }
+    }
 }
 
 extension LockingScreenView {
     func addCancelBtnTarget(target: Any?, action: Selector) {
         cancelBtn.addTarget(target, action: action, for: .touchUpInside)
+    }
+    
+    func addSubscriptionBtnParget(target: Any?, action: Selector) {
+        subscriptionBtn.addTarget(target, action: action, for: .touchUpInside)
+    }
+    
+    func addAdBtnTarget(target: Any?, action: Selector) {
+        adBtn.addTarget(target, action: action, for: .touchUpInside)
     }
 }

@@ -14,7 +14,8 @@ class LeftMenuBuilder: NSObject {
         let nvc = LeftMenuNVC(rootViewController: vc)
         
         let router = LeftMenuRouter(view: vc)
-        let presenter = LeftMenuPresenter(view: vc, router: router)
+        let interactor = LeftMenuInteractor()
+        let presenter = LeftMenuPresenter(view: vc, router: router, interactor: interactor)
         
         vc.setPresenter(presenter)
         

@@ -6,4 +6,8 @@ target 'WatchFace' do
   pod 'Kingfisher'
 	pod 'SideMenu'
   pod 'Hero'
+	pod 'Google-Mobile-Ads-SDK'
+  pod 'SwiftyStoreKit'
+  pod 'AlignedCollectionViewFlowLayout'
+  pod 'SkeletonView'
 end

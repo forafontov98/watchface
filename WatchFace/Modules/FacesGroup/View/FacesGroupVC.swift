@@ -13,7 +13,7 @@ class FacesGroupVC: UIViewController {
     var mainView = FacesGroupView()
     
     private var presenter: IFacesGroupPresenter?
-    
+        
     init() {
         super.init(nibName: nil, bundle: nil)
         modalPresentationStyle = .fullScreen

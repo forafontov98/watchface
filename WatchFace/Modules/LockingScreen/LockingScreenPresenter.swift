@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
 protocol ILockingScreenPresenter {
     func cancelBtnPressed()
@@ -13,6 +14,16 @@ protocol ILockingScreenPresenter {
     func beganPanGesture(translation: CGPoint)
     func changePanGesture(translation: CGPoint, progress: CGFloat)
     func endPanGesture(progress: CGFloat, velocity: CGPoint)
+    
+    func presentSubscriptionScreen()
+    func presentAdScreen()
+
+    func loadAd()
+
+}
+
+protocol LockingScreenPresenterDelegate {
+    func adWatched()
 }
 
 class LockingScreenPresenter: NSObject, ILockingScreenPresenter {
@@ -21,6 +32,10 @@ class LockingScreenPresenter: NSObject, ILockingScreenPresenter {
     private var router: ILockingScreenRouter?
     private var interactor: ILockingScreenInteractor?
     
+    var delegate: LockingScreenPresenterDelegate?
+    
+    private var didEarned = false
+
     init(view: LockingScreenVC, router: ILockingScreenRouter, interactor: ILockingScreenInteractor) {
         self.view = view
         self.router = router
@@ -28,7 +43,7 @@ class LockingScreenPresenter: NSObject, ILockingScreenPresenter {
     }
     
     func cancelBtnPressed() {
-        router?.dismiss()
+        router?.dismiss { }
     }
     
     func beganPanGesture(translation: CGPoint) {
@@ -46,4 +61,49 @@ class LockingScreenPresenter: NSObject, ILockingScreenPresenter {
     func endPanGesture(progress: CGFloat, velocity: CGPoint) {
         router?.endPanGesture(progress: progress, velocity: velocity)
     }
+    
+    func presentSubscriptionScreen() {
+        router?.presentSubscriptionScreen()
+    }
+    
+    func presentAdScreen() {
+        guard let rewardedAd = interactor?.getRewardedAd() else {
+            return
+        }
+        
+        if rewardedAd.isReady {
+            router?.presentAdScreen(rewardedAd: rewardedAd, delegate: self)
+        } else {
+            view?.mainView.loadingState = true
+        }
+    }
+        
+    func loadAd() {
+        interactor?.loadAd(completion: { (success) in
+            let loadingState = self.view?.mainView.loadingState
+            
+            if let loadingState = loadingState, loadingState {
+                self.view?.mainView.loadingState = false
+                self.presentAdScreen()
+            }
+        })
+    }
+    
+}
+
+extension LockingScreenPresenter: GADRewardedAdDelegate {
+    func rewardedAd(_ rewardedAd: GADRewardedAd, userDidEarn reward: GADAdReward) {
+        didEarned = true
+    }
+    
+    func rewardedAdDidDismiss(_ rewardedAd: GADRewardedAd) {
+        if didEarned {
+            router?.dismiss {
+                self.delegate?.adWatched()
+            }
+        } else {
+            loadAd()
+        }
+    }
+    
 }

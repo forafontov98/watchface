@@ -9,12 +9,14 @@ import UIKit
 
 class LockingScreenBuilder: NSObject {
 
-    func build() -> UIViewController {
+    func build(delegate: LockingScreenPresenterDelegate? = nil) -> UIViewController {
         let vc = LockingScreenVC()
         
         let router = LockingScreenRouter(view: vc)
         let interactor = LockingScreenInteractor()
         let presenter = LockingScreenPresenter(view: vc, router: router, interactor: interactor)
+        
+        presenter.delegate = delegate
         
         vc.setPresenter(presenter)
         
