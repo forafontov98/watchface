@@ -6,24 +6,30 @@
 //
 
 import UIKit
-import SkeletonView
 
 class TopWatchFaceCVC: UICollectionViewCell {
     
-    private let bgView: UIView = {
+    private (set) var bgView: UIView = {
         let view = UIView()
         view.layer.masksToBounds = true
         view.layer.cornerRadius = 20.0
-        view.backgroundColor = UIColor(named: "baseBlue")
         return view
     }()
     
-    private let previewImageView: UIImageView = {
+    private (set) var previewImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
         imageView.layer.masksToBounds = true
         imageView.layer.cornerRadius = 30
         return imageView
+    }()
+    
+    private (set) var blurView: UIVisualEffectView = {
+        let effect = UIBlurEffect(style: .light)
+        let view = UIVisualEffectView(effect: effect)
+        view.layer.cornerRadius = 33
+        view.layer.masksToBounds = true
+        return view
     }()
     
     private (set) var dateLabel: UILabel = {
@@ -42,7 +48,7 @@ class TopWatchFaceCVC: UICollectionViewCell {
         return label
     }()
     
-    private let lockIcon: UIImageView = {
+    private (set) var lockIcon: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
         imageView.image = UIImage(named: "mdi_lock")
@@ -63,12 +69,12 @@ class TopWatchFaceCVC: UICollectionViewCell {
             guard let watch = watch else { return }
             
             nameLabel.text = "Apple Watch"
-            previewImageView.loadImageWithKingFisher(for: watch.url)
+            previewImageView.loadImageWithKingFisher(for: watch.url_mini)
             lockIcon.isHidden = watch.status == .free
             
-            previewImageView.heroID = "watchFace_\(watch.url)"
-            lockIcon.heroID = "lockIcon_\(watch.url)"
-            
+            previewImageView.heroID = "watchFace_\(watch.url_mini)"
+            lockIcon.heroID = "lockIcon_\(watch.url_mini)"
+
             dateAndTimeConfig()
         }
     }
@@ -77,9 +83,6 @@ class TopWatchFaceCVC: UICollectionViewCell {
         super.draw(rect)
         
         makeConstraints()
-        
-        isSkeletonable = true
-        bgView.isSkeletonable = true
     }
     
     internal override func prepareForReuse() {
@@ -96,6 +99,15 @@ class TopWatchFaceCVC: UICollectionViewCell {
             $0.top.equalTo(self.snp.top)
             $0.height.equalTo(232.0)
             $0.width.equalTo(176.0)
+        }
+        
+        contentView.addSubview(blurView)
+        
+        blurView.snp.makeConstraints {
+            $0.right.equalTo(self.snp.right).offset(6.0)
+            $0.bottom.equalTo(self.snp.bottom).offset(6.0)
+            $0.height.equalTo(202.0)
+            $0.width.equalTo(169.0)
         }
         
         contentView.addSubview(previewImageView)

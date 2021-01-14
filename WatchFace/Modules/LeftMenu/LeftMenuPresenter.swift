@@ -35,8 +35,8 @@ extension LeftMenuPresenter {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: LeftMenuTVC.className, for: indexPath) as! LeftMenuTVC
-        cell.config(MenuItem.allCases[indexPath.row].rawValue)
-        
+        cell.config(MenuItem.allCases[indexPath.row].rawValue.localized)
+                
         return cell
     }
     
@@ -60,14 +60,31 @@ extension LeftMenuPresenter {
             router?.presentSupportScreen()
             
         case .restorePurchases:
-            print("Restore purchases!")
+            interactor?.restorePurchases { (response) in
+                switch response {
+                
+                case .restoreSuccess:
+                    self.router?.presentAlert(
+                        title: "Success".localized,
+                        message: nil,
+                        completion: {
+                            self.router?.cancelBtnPressed()
+                        })
+                    
+                default:
+                    self.router?.presentAlert(
+                        title: "Mistake".localized,
+                        message: nil,
+                        completion: nil)
+                }
+            }
         }
     }
 }
 
 enum MenuItem: String, CaseIterable {
     case about = "About"
-    case subscriptionInfo = "Subscription info"
+    case subscriptionInfo = "About subscription"
     case privacyPolicy = "Privacy policy"
     case rateTheApp = "Rate the app"
     case support = "Support"

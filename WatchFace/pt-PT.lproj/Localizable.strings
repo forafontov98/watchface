@@ -1,0 +1,73 @@
+/* 
+  Localizable.strings
+  WatchFace
+
+  Created by MacBook on 08.01.2021.
+  
+*/
+
+"For Apple Watch" = "Para Apple Watch";
+"Clock faces" = "Faces do relógio";
+"Choose from a large library of unique and stunning dials" = "Escolha a partir de uma grande biblioteca de mostradores únicas e impressionantes";
+"Set an individual style" = "Definir um estilo individual";
+"Various" = "Vários";
+"Pick up the dials that match your mood or lifestyle" = "Pegar os mostradores que correspondem seu humor ou estilo de vida";
+"Premium subscription" = "Assinatura premium";
+"Access to all clock faces" = "Acesso a todas as faces do relógio";
+"No ad" = "Nenhum anúncio";
+"Month subscription" = "Assinatura mês";
+"per month" = "por mês";
+"Annual subscription" = "Inscrição anual";
+"per year" = "por ano";
+"Week subscription" = "Assinatura semanal";
+"per week" = "por semana";
+"Start your 3 days free trial" = "";
+"The plan renews automaticaly" = "Inicie o seu teste gratuito de 3 dias";
+"Cancel any time" = "O plano renova a automaticidade";
+"Subscribe" = "Cancelar a qualquer hora";
+"Clock faces" = "Subscrever";
+"More" = "Mais";
+"Clock face of the day" = "Face do relógio do dia";
+"Clock face of the month" = "Face do relógio do mês";
+"Support" = "Apoio, suporte";
+"About subscription" = "Sobre subscrição";
+"Terms" = "Condições";
+"Privacy policy" = "Política de Privacidade";
+"About" = "Sobre";
+"Rate the app" = "Retete a aplicação";
+"Restore purchases" = "Repor as compras";
+"Download" = "Baixar";
+"To download the watch face, watch an ad or sign up for a subscription" = "Para baixar o mostrador do relógio, Assista a um anúncio ou grave uma assinatura";
+"Subscribe" = "Assinar";
+"Next" = "Adiante";
+"Cancel" = "Cancelar";
+"Don't show it again" = "Não o mostres outra vez.";
+"Ok" = "Bem";
+"Find the line \"Create Watch Face\"" = "Encontrar a linha \" Criar face de Vigia\"";
+"Ad" = "Anuncio";
+"Settings" = "Definicao";
+"Success" = "Sucesso";
+"The subscription has been successfully paid for and is valid until" = "A assinatura foi paga com sucesso e é válida até";
+"Expired" = "Chegar";
+"Your subscription has expired" = "A sua assinatura expirou";
+"Mistake" = "Erro";
+"The subscription was not paid for" = "A Assinatura não foi paga";
+
+"Loading" = "Carregando";
+"Conversion to" = "Conversão para";
+"Done, set the watch face from the gallery" = "Pronto, defina o mostrador do relógio na galeria";
+
+"Step 1" = "Passo 1";
+"Choose your favorite watch face and click \"Save\"" = "Escolha o mostrador do relógio que você gosta e pressione o botão \"Salvar\"";
+"Next" = "Adiante";
+"Step 2" = "Passo 2";
+"Allow photo access to save your watch faces" = "Permita o acesso às fotos para salvar os mostradores do relógio";
+"Further" = "Adiante";
+"Step 3" = "Passo 3";
+"Click on the saved watch face in the gallery." = "Na galeria, clique no mostrador do relógio salvo.";
+"Next, click on the \"Share\" button and select the \"Create Watch face\" option" = "Em seguida, clique no botão \"Compartilhar\" e selecione a opção \"Criar mostrador do relógio\"";
+"Next" = "Adiante";
+"Step 4" = "Passo 4";
+"Select the desired option and click \"Add\"" = "Selecione a opção desejada e clique no botão \"Adicionar\"";
+"Next" = "Adiante";
+"Installation guide" = "Guia de instalação";

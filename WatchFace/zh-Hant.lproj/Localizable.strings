@@ -1,0 +1,74 @@
+/* 
+  Localizable.strings
+  WatchFace
+
+  Created by MacBook on 08.01.2021.
+  
+*/
+
+"For Apple Watch" = "对于Apple关注";
+"Clock faces" = "钟面";
+"Choose from a large library of unique and stunning dials" = "选择的独特而迷人的表盘大图书馆";
+"Set an individual style" = "设置的个人风格";
+"Various" = "各个";
+"Pick up the dials that match your mood or lifestyle" = "拿起您的心情或生活方式，表盘";
+"Premium subscription" = "溢价认购";
+"Access to all clock faces" = "访问所有的钟面";
+"No ad" = "无广告";
+"Month subscription" = "个月的订阅";
+"per month" = "每月";
+"Annual subscription" = "年度订阅";
+"per year" = "每年";
+"Week subscription" = "每周订阅";
+"per week" = "每周";
+"Start your 3 days free trial" = "开始您的3天免费试用";
+"The plan renews automaticaly" = "该计划自动更新";
+"Cancel any time" = "取消任何时间";
+"Subscribe" = "订阅";
+"Clock faces" = "钟面";
+"More" = "更多";
+"Clock face of the day" = "当天的钟面";
+"Clock face of the month" = "这个月的钟面";
+"Support" = "支持";
+"About subscription" = "关于认购";
+"Terms" = "条款";
+"Privacy policy" = "隐私政策";
+"About" = "关于应用程序";
+"Rate the app" = "评价应用程序";
+"Restore purchases" = "恢复购买";
+"Download" = "下载";
+"To download the watch face, watch an ad or sign up for a subscription" = "要下载表盘，请观看广告或注册订阅";
+"Subscribe" = "订阅";
+"Next" = "下一个";
+
+"Cancel" = "禄谩卤拢潞";
+"Don't show it again" = "别再出现了";
+"Ok" = "好的";
+"Find the line \"Create Watch Face\"" = "查找行\"创建表盘\"";
+"Ad" = "广告";
+"Settings" = "设置";
+"Success" = "成功";
+"The subscription has been successfully paid for and is valid until" = "订阅已成功支付，有效期至";
+"Expired" = "过期";
+"Your subscription has expired" = "您的订阅已过期";
+"Mistake" = "错误";
+"The subscription was not paid for" = "订阅没有支付";
+
+"Loading" = "載入中";
+"Conversion to" = "轉換為";
+"Done, set the watch face from the gallery" = "完成，從圖庫設置錶盤";
+
+"Step 1" = "步骤1";
+"Choose your favorite watch face and click \"Save\"" = "选择你最喜欢的表盘，然后单击\"保存\"";
+"Next" = "下一个";
+"Step 2" = "步骤2";
+"Allow photo access to save your watch faces" = "允许照片访问保存您的表盘";
+"Further" = "进一步";
+"Step 3" = "步骤3";
+"Click on the saved watch face in the gallery." = "点击保存的表盘在画廊。";
+"Next, click on the \"Share\" button and select the \"Create Watch face\" option" = "接下来，点击\"分享\"按钮，选择\"创建表盘\"选项";
+"Next" = ".";
+"Step 4" = "步骤4";
+"Select the desired option and click \"Add\"" = "选择所需的选项，然后单击\"添加\"";
+"Next" = "下一个";
+"Installation guide" = "安裝指南";

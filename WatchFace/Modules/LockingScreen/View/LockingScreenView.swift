@@ -11,13 +11,19 @@ class LockingScreenView: UIView {
 
     private (set) var cancelBtn: UIButton = {
         let button = UIButton()
-        button.setImage(UIImage(named: "cancel_btn"), for: .normal)
-        button.heroID = "cancel_btn"
         return button
     }()
     
+    private (set) var cancelIcon: UIImageView = {
+        let icon = UIImageView()
+        icon.image = UIImage(named: "cancel_btn")
+        icon.contentMode = .scaleAspectFit
+        icon.heroID = "cancel_btn"
+        return icon
+    }()
+    
     private (set) var blurView: UIVisualEffectView = {
-        let effect = UIBlurEffect(style: .extraLight)
+        let effect = UIBlurEffect(style: .light)
         let view = UIVisualEffectView(effect: effect)
         return view
     }()
@@ -41,7 +47,7 @@ class LockingScreenView: UIView {
         let label = UILabel()
         label.font = .systemFont(ofSize: 20.0, weight: .semibold)
         label.textColor = .gray
-        label.text = "Чтобы скачать циферблат посмотри рекламу или оформи подписку"
+        label.text = "To download the watch face, watch an ad or sign up for a subscription".localized
         label.textAlignment = .center
         label.numberOfLines = 0
         return label
@@ -54,7 +60,7 @@ class LockingScreenView: UIView {
         button.layer.masksToBounds = true
         button.backgroundColor = UIColor(named: "baseGreen")
         button.titleLabel?.font = .systemFont(ofSize: 20.0, weight: .semibold)
-        button.setTitle("AD", for: .normal)
+        button.setTitle("Ad".localized, for: .normal)
         return button
     }()
     
@@ -65,7 +71,7 @@ class LockingScreenView: UIView {
         button.layer.masksToBounds = true
         button.backgroundColor = UIColor(named: "baseOrange")
         button.titleLabel?.font = .systemFont(ofSize: 20.0, weight: .semibold)
-        button.setTitle("Subscription", for: .normal)
+        button.setTitle("Subscribe".localized, for: .normal)
         return button
     }()
     
@@ -88,12 +94,19 @@ class LockingScreenView: UIView {
             $0.edges.equalToSuperview()
         }
         
-        addSubview(cancelBtn)
+        addSubview(cancelIcon)
         
-        cancelBtn.snp.makeConstraints {
+        cancelIcon.snp.makeConstraints {
             $0.right.equalTo(self.snp.right).offset(-16.0)
             $0.width.height.equalTo(20.0)
             $0.top.equalTo(self.snp.topMargin).offset(49.0)
+        }
+        
+        addSubview(cancelBtn)
+        
+        cancelBtn.snp.makeConstraints {
+            $0.center.equalTo(cancelIcon.snp.center)
+            $0.width.height.equalTo(50.0)
         }
         
         addSubview(grayView)

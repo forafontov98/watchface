@@ -15,7 +15,7 @@ class WatchFacesView: UIView {
         tableView.register(CategoryTVC.self, forCellReuseIdentifier: CategoryTVC.className)
         tableView.separatorStyle = .none
         
-        tableView.rowHeight = 180.0
+        tableView.rowHeight = 220.0
         tableView.estimatedRowHeight = 180.0
         
         tableView.tableHeaderView = WatchFacesTopView()
@@ -36,9 +36,6 @@ class WatchFacesView: UIView {
     
     init() {
         super.init(frame: .zero)
-        
-        isSkeletonable = true
-        //tableView.isSkeletonable = true
 
         backgroundColor = .white
         

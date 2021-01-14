@@ -10,6 +10,9 @@ import UIKit
 
 protocol IHttpClient {
     
+    func getData(url: String,
+                      callback: @escaping(Data) -> Void)
+
     func getRequest(request: HttpRequestData,
                     callback: ((Result<Data, Error>) -> Void)?)
     
@@ -31,6 +34,15 @@ class HttpClient: IHttpClient {
     
     static let baseURL = "http://www.my-best-dating.com/"
 
+    func getData(url: String, callback: @escaping(Data)->Void) {
+        Alamofire.request(url).response { response in
+            if let data = response.data {
+                callback(data)
+            }
+        }
+        
+    }
+    
     func getRequest(request: HttpRequestData, callback: ((Result<Data, Error>) -> Void)?) {
 
         let req = Alamofire.request(HttpClient.baseURL + request.endpoint,

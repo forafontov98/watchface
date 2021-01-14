@@ -9,7 +9,7 @@ import UIKit
 
 class WatchPreviewBuilder: NSObject {
 
-    func build(watch: WatchFace?, groupName: String?) -> UIViewController {
+    func build(watch: WatchFace?, image: UIImage?, groupName: String?) -> UIViewController {
         let vc = WatchPreviewVC()
         
         let router = WatchPreviewRouter(view: vc)

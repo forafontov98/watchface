@@ -6,16 +6,26 @@
 //
 
 import UIKit
-import SkeletonView
 
 class WatchFaceCVC: UICollectionViewCell {
+    
+    private (set) var bgView: UIView = {
+        let view = UIView()
+        view.layer.masksToBounds = true
+        view.layer.cornerRadius = 25
+        view.layer.borderColor = UIColor.lightGray.withAlphaComponent(0.35).cgColor
+        view.layer.borderWidth = 3.0
+        
+        return view
+    }()
     
     private (set) var previewImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
         imageView.layer.masksToBounds = true
-        imageView.layer.cornerRadius = 16.7
-
+        imageView.layer.cornerRadius = 21
+        imageView.backgroundColor = UIColor.lightGray.withAlphaComponent(0.35)
+        
         return imageView
     }()
     
@@ -35,7 +45,7 @@ class WatchFaceCVC: UICollectionViewCell {
         return label
     }()
     
-    private let lockIcon: UIImageView = {
+    private (set) var lockIcon: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
         imageView.image = UIImage(named: "mdi_lock")
@@ -45,11 +55,11 @@ class WatchFaceCVC: UICollectionViewCell {
     var watch: WatchFace? {
         didSet {
             guard let watch = watch else { return }
-            previewImageView.loadImageWithKingFisher(for: watch.url)
+            previewImageView.loadImageWithKingFisher(for: watch.url_mini)
             lockIcon.isHidden = watch.status == .free
             
-            previewImageView.heroID = "watchFace_\(watch.url)"
-            lockIcon.heroID = "lockIcon_\(watch.url)"
+            previewImageView.heroID = "watchFace_\(watch.url_mini)"
+            lockIcon.heroID = "lockIcon_\(watch.url_mini)"
             
             dateAndTimeConfig()
         }
@@ -59,10 +69,6 @@ class WatchFaceCVC: UICollectionViewCell {
         super.draw(rect)
         
         makeConstraints()
-        
-        //isSkeletonable = true
-        //previewImageView.isSkeletonable = true
-
     }
     
     internal override func prepareForReuse() {
@@ -72,10 +78,17 @@ class WatchFaceCVC: UICollectionViewCell {
     }
     
     func makeConstraints() {
+        contentView.addSubview(bgView)
+        
+        bgView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
+        
         contentView.addSubview(previewImageView)
         
         previewImageView.snp.makeConstraints {
-            $0.edges.equalToSuperview()
+            $0.left.top.equalToSuperview().offset(6.0)
+            $0.right.bottom.equalToSuperview().offset(-6.0)
         }
         
         previewImageView.addSubview(dateLabel)

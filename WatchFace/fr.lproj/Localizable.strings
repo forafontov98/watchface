@@ -1,0 +1,74 @@
+/* 
+  Localizable.strings
+  WatchFace
+
+  Created by MacBook on 08.01.2021.
+  
+*/
+
+"For Apple Watch" = "Apple montre";
+"Clock faces" = "Visages d'horloge";
+"Choose from a large library of unique and stunning dials" = "Choisissez parmi une grande bibliothèque de cadrans uniques et de superbes";
+"Set an individual style" = "Définir un style individuel";
+"Various" = "Divers";
+"Pick up the dials that match your mood or lifestyle" = "Ramassez les cadrans qui correspondent à votre humeur ou style de vie";
+"Premium subscription" = "Abonnement premium";
+"Access to all clock faces" = "L'accès à tous les visages d'horloge";
+"No ad" = "Aucune annonce";
+"Month subscription" = "Mois d'abonnement";
+"per month" = "par mois";
+"Annual subscription" = "Souscription annuelle";
+"per year" = "par an";
+"Week subscription" = "Abonnement hebdomadaire";
+"per week" = "par semaine";
+"Start your 3 days free trial" = "Commencez votre essai gratuit de 3 jours";
+"The plan renews automaticaly" = "Le plan se renouvelle automatiquement";
+"Cancel any time" = "Annuler en tout temps";
+"Subscribe" = "Abonner";
+"Clock faces" = "Visages d'horloge";
+"More" = "Plus";
+"Clock face of the day" = "face Horloge du jour";
+"Clock face of the month" = "face Horloge du mois";
+"Support" = "Soutien";
+"About subscription" = "A propos de l'abonnement";
+"Terms" = "Termes";
+"Privacy policy" = "Politique de confidentialité";
+"About" = "À propos de l'application";
+"Rate the app" = "Rete l'application";
+"Restore purchases" = "Restaurer les achats";
+"Download" = "Télécharger";
+"To download the watch face, watch an ad or sign up for a subscription" = "Pour télécharger le cadran de la montre, regardez la publicité ou inscrivez-vous";
+"Subscribe" = "S'abonner à";
+"Next" = "Ensuite";
+
+"Cancel" = "Annuler";
+"Don't show it again" = "Ne pas afficher de nouveau";
+"Ok" = "OK";
+"Find the line \"Create Watch Face\"" = "Trouver la ligne \" créer le visage de la montre\"";
+"Ad" = "Annonce";
+"Settings" = "Paramètre";
+"Success" = "Succès";
+"The subscription has been successfully paid for and is valid until" = "L'abonnement a été payé avec succès et est valable jusqu'à";
+"Expired" = "Expirer";
+"Your subscription has expired" = "Votre abonnement a expiré";
+"Mistake" = "Erreur";
+"The subscription was not paid for" = "L'abonnement n'a pas été payé pour";
+
+"Loading" = "Chargement";
+"Conversion to" = "Conversion en";
+"Done, set the watch face from the gallery" = "Terminé, définissez le cadran de la montre dans la galerie";
+
+"Step 1" = "Étape 1";
+"Choose your favorite watch face and click \"Save\"" = "Choisissez votre cadran de montre préféré et appuyez sur le bouton \"Enregistrer\"";
+"Next" = "Ensuite";
+"Step 2" = "Étape 2";
+"Allow photo access to save your watch faces" = "Autoriser l'accès aux photos pour enregistrer les cadrans de la montre";
+"Further" = "Ensuite";
+"Step 3" = "Étape 3";
+"Click on the saved watch face in the gallery." = "Cliquez dans la galerie sur le cadran de l'horloge enregistré.";
+"Next, click on the \"Share\" button and select the \"Create Watch face\" option" = "Ensuite, cliquez sur le bouton \"Partager\" et sélectionnez l'option \"Créer un cadran de montre\"";
+"Next" = "Ensuite";
+"Step 4" = "Étape 4";
+"Select the desired option and click \"Add\"" = "Sélectionnez l'option souhaitée et cliquez sur \"Ajouter\"";
+"Next" = "Ensuite";
+"Installation guide" = "Guide d'installation";

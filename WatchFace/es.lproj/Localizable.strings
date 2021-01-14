@@ -1,0 +1,73 @@
+/* 
+  Localizable.strings
+  WatchFace
+
+  Created by MacBook on 08.01.2021.
+  
+*/
+
+"For Apple Watch" = "Para Apple Seguir";
+"Clock faces" = "Caras de reloj";
+"Choose from a large library of unique and stunning dials" = "Elegir entre una gran biblioteca de marca únicas y sorprendentes";
+"Set an individual style" = "Establecer un estilo individual";
+"Various" = "Varios";
+"Pick up the dials that match your mood or lifestyle" = "Recoger las esferas que coinciden con su estado de ánimo o estilo de vida";
+"Premium subscription" = "Suscripción premium";
+"Access to all clock faces" = "El acceso a todas las esferas de relojes";
+"No ad" = "Sin anuncios";
+"Month subscription" = "Suscripción de un mes";
+"per month" = "por mes";
+"Annual subscription" = "Suscripción anual";
+"per year" = "por año";
+"Week subscription" = "Suscripción semanal";
+"per week" = "por semana";
+"Start your 3 days free trial" = "Comience su prueba gratuita de 3 días";
+"The plan renews automaticaly" = "El plan se renueva automáticamente";
+"Cancel any time" = "Cancelar en cualquier momento";
+"Subscribe" = "Suscribir";
+"Clock faces" = "Caras de reloj";
+"More" = "Más";
+"Clock face of the day" = "Ver la cara del día";
+"Clock face of the month" = "Ver la cara del mes";
+"Support" = "Apoyo";
+"About subscription" = "Acerca de suscripción";
+"Terms" = "Condiciones";
+"Privacy policy" = "Política de privacidad";
+"About" = "Sobre";
+"Rate the app" = "Rete la aplicación";
+"Restore purchases" = "Restaurar compras";
+"Download" = "Descargar";
+"To download the watch face, watch an ad or sign up for a subscription" = "Para descargar la esfera del reloj, busca anuncios o Suscríbete";
+"Subscribe" = "Suscribirse";
+"Next" = "A continuación";
+"Cancel" = "Cancelar";
+"Don't show it again" = "No lo vuelvas a mostrar";
+"Ok" = "Ok";
+"Find the line \"Create Watch Face\"" = "Encuentra la línea \"Crear esfera del reloj\"";
+"Ad" = "Ad";
+"Settings" = "Configuración";
+"Success" = "Éxito";
+"The subscription has been successfully paid for and is valid until" = "La suscripción se ha pagado correctamente y es válida hasta";
+"Expired" = "Expirar";
+"Your subscription has expired" = "Su suscripción ha caducado";
+"Mistake" = "Error";
+"The subscription was not paid for" = "La suscripción no fue pagada";
+
+"Loading" = "Cargando";
+"Conversion to" = "Conversión a";
+"Done, set the watch face from the gallery" = "Listo, configura la esfera del reloj desde la galería";
+
+"Step 1" = "Medida 1";
+"Choose your favorite watch face and click \"Save\"" = "Seleccione la esfera del reloj que desee y haga clic en \"Guardar\"";
+"Next" = "A continuación";
+"Step 2" = "Medida 2";
+"Allow photo access to save your watch faces" = "Permitir el acceso a la foto para guardar las caras del reloj";
+"Further" = "A continuación";
+"Step 3" = "Medida 3";
+"Click on the saved watch face in the gallery." = "Haga clic en la galería en la esfera del reloj guardada.";
+"Next, click on the \"Share\" button and select the \"Create Watch face\" option" = "A continuación, haga clic en el botón \"compartir\" y seleccione la opción \"Crear esfera del reloj\"";
+"Next" = "A continuación";
+"Step 4" = "Medida 4";
+"Select the desired option and click \"Add\"" = "Seleccione la opción deseada y haga clic en el botón \"Agregar\"";
+"Next" = "A continuación";
+"Installation guide" = "Guía de instalación";

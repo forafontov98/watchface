@@ -6,13 +6,12 @@
 //
 
 import UIKit
-import SkeletonView
 
-protocol IWatchFacesListPresenter: SkeletonTableViewDataSource, UITableViewDelegate, SkeletonCollectionViewDataSource, UICollectionViewDelegate {
+protocol IWatchFacesListPresenter: UITableViewDataSource, UITableViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate {
     func presentMenu()
     func getWatchList()
     
-    func presentWelcomeTour()
+    //func presentWelcomeTourIfNeeded()
     func categoriesBtnPressed()
 }
 
@@ -54,6 +53,15 @@ class WatchFacesListPresenter: NSObject, IWatchFacesListPresenter {
         self.view = view
         self.interactor = interactor
         self.router = router
+        
+        Notify.add(self, #selector(self.updateViewIfNeeded), name: Keys.purchase_state_changed)
+
+    }
+    
+    @objc
+    func updateViewIfNeeded() {
+        view?.mainView.tableView.reloadData()
+        view?.mainView.tableHeaderView?.collectionView.reloadData()
     }
     
     func presentMenu() {
@@ -70,10 +78,13 @@ class WatchFacesListPresenter: NSObject, IWatchFacesListPresenter {
         })
     }
     
-    func presentWelcomeTour() {
-        router?.presentWelcomeTour()
+    /*
+    func presentWelcomeTourIfNeeded() {
+        //if !UserDefaults.standard.bool(forKey: Keys.WT_was_shown) {
+            router?.presentWelcomeTour()
+        //}
     }
-
+*/
     
     func categoriesBtnPressed() {
         if categoriesOpened {
@@ -87,10 +98,7 @@ class WatchFacesListPresenter: NSObject, IWatchFacesListPresenter {
 }
 
 extension WatchFacesListPresenter: CategoryTVCDelegate {
-    func collectionSkeletonView(_ skeletonView: UITableView, cellIdentifierForRowAt indexPath: IndexPath) -> ReusableCellIdentifier {
-       return CategoryTVC.className
-    }
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return categoriesToPresent.count
     }
@@ -108,22 +116,14 @@ extension WatchFacesListPresenter: CategoryTVCDelegate {
         router?.presentFacesGroup(categoriesToPresent[indexPath.row])
     }
     
-    func watchPreviewPressed(indexPath: IndexPath, _ watch: WatchFace) {
+    func watchPreviewPressed(cell: CategoryTVC, indexPath: IndexPath, _ watch: WatchFace) {
         let group = categoriesToPresent[indexPath.row]
-        router?.presentWatchPreview(watch, groupName: group.name)
+        router?.presentWatchPreview(watch, image: cell.imageView?.image, groupName: group.name)
     }
 }
  
 extension WatchFacesListPresenter: UICollectionViewDelegateFlowLayout {
-    
-    func collectionSkeletonView(_ skeletonView: UICollectionView, cellIdentifierForItemAt indexPath: IndexPath) -> ReusableCellIdentifier {
-        return TopWatchFaceCVC.className
-    }
-    
-    func collectionSkeletonView(_ skeletonView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
-    }
-    
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         guard let id = collectionView.restorationIdentifier else { return 0 }
@@ -157,6 +157,19 @@ extension WatchFacesListPresenter: UICollectionViewDelegateFlowLayout {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TopWatchFaceCVC.className, for: indexPath) as! TopWatchFaceCVC
             cell.watch = categories.first?.watches[indexPath.row]
            
+            if SwiftyStoreService.shared.isPro {
+                cell.lockIcon.isHidden = true
+            }
+            
+            let colors = [
+                UIColor(named: "baseOrange")!,
+                UIColor(named: "darkBlue")!,
+                UIColor(named: "baseGreen")!
+            ]
+            
+            cell.bgView.backgroundColor = colors[indexPath.row % 3]
+            cell.clipsToBounds = false
+            
             return cell
         }
         
@@ -182,7 +195,9 @@ extension WatchFacesListPresenter: UICollectionViewDelegateFlowLayout {
         case .popular:
             if let group = categories.first {
                 let watch = group.watches[indexPath.row]
-                router?.presentWatchPreview(watch, groupName: group.name)
+                let image = (collectionView.cellForItem(at: indexPath) as? WatchFaceCVC)?.previewImageView.image
+
+                router?.presentWatchPreview(watch, image: image, groupName: group.name)
             }
             
         }

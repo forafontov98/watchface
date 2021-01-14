@@ -11,7 +11,6 @@ class FacesGroupView: UIView {
 
     private (set) var topLabel: UILabel = {
         let label = UILabel()
-        label.text = "Some group"
         label.textColor = UIColor(named: "darkTextColor")
         label.textAlignment = .left
         label.font = .systemFont(ofSize: 33.0, weight: .bold)

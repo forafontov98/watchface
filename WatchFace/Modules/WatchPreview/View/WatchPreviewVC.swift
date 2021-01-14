@@ -15,8 +15,8 @@ class WatchPreviewVC: UIViewController {
         
     private var groupName: String?
     
-    private var panGR = UIPanGestureRecognizer()
-        
+    private let panGR = UIPanGestureRecognizer()
+            
     init() {
         super.init(nibName: nil, bundle: nil)
         modalPresentationStyle = .overFullScreen
@@ -32,28 +32,18 @@ class WatchPreviewVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        panGR.addTarget(self, action: #selector(pan))
-        panGR.delegate = self
-        mainView.addGestureRecognizer(panGR)
-        
-        if let watchFace = presenter?.watchFace {
-            mainView.imageView.loadImageWithKingFisher(for: watchFace.url)
-            
-            if watchFace.status == .free {
-                mainView.lockIcon.removeFromSuperview()
-            }
-        }
+        presenter?.viewConfig()
         
         mainView.topLabel.text = groupName
         
         heroViewsConfig()
 
-        mainView.addCancelBtnTarget(target: self, action: #selector(cancelBtnPressed))
-        mainView.addDownloadBtnTarget(target: self, action: #selector(downloadBtnPressed))
-
+        addTargets()
+        
         if let watchFace = presenter?.watchFace {
-            mainView.imageView.heroID = "watchFace_\(watchFace.url)"
-            mainView.lockIcon.heroID = "lockIcon_\(watchFace.url)"
+            mainView.imageView.loadImageWithKingFisher(for: watchFace.url_full)
+            mainView.imageView.heroID = "watchFace_\(watchFace.url_mini)"
+            mainView.lockIcon.heroID = "lockIcon_\(watchFace.url_mini)"
             mainView.dateAndTimeConfig()
         }
     }
@@ -70,6 +60,10 @@ class WatchPreviewVC: UIViewController {
         self.groupName = name
     }
     
+    func setImage(_ image: UIImage?) {
+        self.mainView.imageView.image = image
+    }
+    
     @objc
     func cancelBtnPressed() {
         presenter?.cancelBtnPressed()
@@ -78,6 +72,11 @@ class WatchPreviewVC: UIViewController {
     @objc
     func downloadBtnPressed() {
         presenter?.downloadBtnPressed()
+    }
+    
+    @objc
+    func questionBtnPressed() {
+        presenter?.presentGuideScreen()
     }
     
     @objc
@@ -96,6 +95,27 @@ class WatchPreviewVC: UIViewController {
         }
     }
     
+    @objc
+    func tap() {
+        presenter?.cancelBtnPressed()
+    }
+    
+    func setStepLabel(_ val: String) {
+        DispatchQueue.main.async {
+            self.mainView.stepLabel.text = val
+        }
+    }
+    
+    private func addTargets() {
+        panGR.addTarget(self, action: #selector(pan))
+        panGR.delegate = self
+        mainView.addGestureRecognizer(panGR)
+
+        mainView.addCancelBtnTarget(target: self, action: #selector(cancelBtnPressed))
+        mainView.addDownloadBtnTarget(target: self, action: #selector(downloadBtnPressed))
+        mainView.addQuestionBtnTarget(target: self, action: #selector(questionBtnPressed))
+    }
+    
     private func heroViewsConfig() {
 
         mainView.blurView.heroModifiers = [.whenAppearing(.fade),
@@ -104,7 +124,7 @@ class WatchPreviewVC: UIViewController {
         mainView.topLabel.heroModifiers = [.whenAppearing(.translate(x: -150.0), .fade, .delay(0.1)),
                                            .whenDisappearing(.translate(x: -150.0), .fade, .delay(0.19))]
         
-        mainView.cancelBtn.heroModifiers = [.whenAppearing(.translate(x: 150.0), .fade, .delay(0.1)),
+        mainView.cancelIcon.heroModifiers = [.whenAppearing(.translate(x: 150.0), .fade, .delay(0.1)),
                                             .whenDisappearing(.translate(x: 150.0), .fade, .delay(0.19))]
         
         mainView.downloadBtn.heroModifiers = [.whenAppearing(.translate(x: -150.0), .fade, .delay(0.19)),

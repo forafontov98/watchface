@@ -14,6 +14,8 @@ protocol ILeftMenuRouter {
     func presentSubscriptionInfoScreen()
     func presentPrivacyScreen()
     func presentSupportScreen()
+    
+    func presentAlert(title: String?, message: String?, completion: (()->Void)?)
 }
 
 class LeftMenuRouter: NSObject, ILeftMenuRouter {
@@ -47,5 +49,20 @@ class LeftMenuRouter: NSObject, ILeftMenuRouter {
     private func presentWebView(url: String) {
         let vc = WebViewBuilder().build(url: url)
         view?.present(vc, animated: true, completion: nil)
+    }
+    
+    func presentAlert(title: String?, message: String?, completion: (()->Void)? = nil) {
+        let alertVC = UIAlertController(
+            title: title,
+            message: message,
+            preferredStyle: .alert)
+        
+        alertVC.addAction(UIAlertAction(title: "Ok".localized, style: .cancel, handler: { (_) in
+            if let completion = completion {
+                completion()
+            }
+        }))
+        
+        view?.present(alertVC, animated: true)
     }
 }

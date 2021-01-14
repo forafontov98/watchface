@@ -19,10 +19,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.windowScene = sceneWindow
         window?.makeKeyAndVisible()
         
+        /*
         let vc = WatchFacesListBuilder().build()
         let nvc = UINavigationController(rootViewController: vc)
+         
+         window?.rootViewController = nvc
+
+        */
         
-        window?.rootViewController = nvc
+        let vc = StartScreenBuilder().build()
+        window?.rootViewController = vc
+
         
     }
 

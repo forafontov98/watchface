@@ -6,11 +6,10 @@
 //
 
 import UIKit
-import SkeletonView
 
 protocol CategoryTVCDelegate: class {
     func showAllBtnPressed(_ indexPath: IndexPath)
-    func watchPreviewPressed(indexPath: IndexPath, _ watch: WatchFace)
+    func watchPreviewPressed(cell: CategoryTVC, indexPath: IndexPath, _ watch: WatchFace)
 }
 
 class CategoryTVC: UITableViewCell {
@@ -28,7 +27,7 @@ class CategoryTVC: UITableViewCell {
     private let showAllButton: UIButton = {
         let button = UIButton()
         button.setTitleColor(UIColor(named: "darkTextColor"), for: .normal)
-        button.setTitle("Show all", for: .normal)
+        button.setTitle("More".localized, for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 13.0, weight: .medium)
         button.titleLabel?.textAlignment = .right
         return button
@@ -37,7 +36,7 @@ class CategoryTVC: UITableViewCell {
     private (set) var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
-        layout.itemSize = CGSize(width: 91.0, height: 110.0)
+        layout.itemSize = CGSize(width: 111.0, height: 134.0)
         layout.minimumLineSpacing = 16.0
         layout.sectionInset.left = 11.0
         layout.sectionInset.right = 11.0
@@ -67,10 +66,6 @@ class CategoryTVC: UITableViewCell {
         
         makeConstraints()
         addTargets()
-        
-        //isSkeletonable = true
-        //nameLabel.isSkeletonable = true
-        //collectionView.isSkeletonable = true
         
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -105,7 +100,7 @@ class CategoryTVC: UITableViewCell {
         collectionView.snp.makeConstraints {
             $0.left.right.equalToSuperview()
             $0.top.equalTo(showAllButton.snp.bottom).offset(16.0)
-            $0.height.equalTo(110.0)
+            $0.height.equalTo(134.0)
         }
     }
     
@@ -131,14 +126,17 @@ extension CategoryTVC: UICollectionViewDataSource, UICollectionViewDelegate {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: WatchFaceCVC.className, for: indexPath) as! WatchFaceCVC
         
         cell.watch = watchCategory?.watches[indexPath.row]
-        //cell.isSkeletonable = true
+        
+        if SwiftyStoreService.shared.isPro {
+            cell.lockIcon.isHidden = true
+        }
         
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let watch = watchCategory?.watches[indexPath.row], let ip = self.indexPath {
-            delegate?.watchPreviewPressed(indexPath: ip, watch)
+            delegate?.watchPreviewPressed(cell: self, indexPath: ip, watch)
         }
         
         UIImpactFeedbackGenerator(style: .light).impactOccurred()

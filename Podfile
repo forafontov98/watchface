@@ -9,5 +9,6 @@ target 'WatchFace' do
 	pod 'Google-Mobile-Ads-SDK'
   pod 'SwiftyStoreKit'
   pod 'AlignedCollectionViewFlowLayout'
-  pod 'SkeletonView'
+  pod 'YandexMobileMetrica/Dynamic', '3.12.0'
+  pod 'FacebookCore'
 end

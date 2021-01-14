@@ -1,0 +1,74 @@
+/* 
+  Localizable.strings
+  WatchFace
+
+  Created by MacBook on 08.01.2021.
+  
+*/
+
+"For Apple Watch"="Für Apple-Uhr";
+"Clock faces"="Zifferblätter";
+"Choose from a large library of unique and stunning dials"="Wählen Sie aus einer großen Bibliothek von einzigartigen und atemberaubenden Zifferblätter";
+"Set an individual style"="Setzen Sie einen individuellen Stil";
+"Various"="Verschiedene";
+"Pick up the dials that match your mood or lifestyle"="Pick-up die Zifferblätter, die Ihre Stimmung oder Lebensstil passen";
+"Premium subscription"="Premium-Abonnement";
+"Access to all clock faces"="Der Zugang zu allen Zifferblättern";
+"No ad"="keine Anzeige";
+"Month subscription"="Monats-Abo";
+"per month"="pro Monat";
+"Annual subscription"="Jahresabonnement";
+"per year"="pro Jahr";
+"Week subscription" = "Woche supscription";
+"per week" = "pro Woche";
+"Start your 3 days free trial"="Starten Sie Ihre 3 Tage Kostenlose Testversion";
+"The plan renews automaticaly"="Der plan wird automatisch erneuert";
+"Cancel any time"="Jederzeit kündigen";
+"Subscribe"="Abonnieren";
+"Clock faces"="Zifferblätter";
+"More"="Mehr";
+"Clock face of the day"="Zifferblatt des Tages";
+"Clock face of the month"="Zifferblatt des Monats";
+"Support"="Unterstützung";
+"About subscription"="Über Abonnement";
+"Terms"="Bedingungen";
+"Privacy policy"="Datenschutz-Bestimmungen";
+"About"="Über";
+"Rate the app"="Rete die app";
+"Restore purchases"="Einkäufe wiederherstellen";
+"Download"="Herunterladen";
+"To download the watch face, watch an ad or sign up for a subscription"="Um tsiferbalt Uhr herunterzuladen, schauen Sie sich die Werbung an oder formten ein Abonnement";
+"Subscribe"="Abonnieren";
+"Next"="Weiter";
+
+"Cancel" = "Stornieren";
+"Don't show it again" = "Zeige es nicht wieder";
+"Ok" = "Okay";
+"Find the line \"Create Watch Face\"" = "Suchen Sie die Zeile \"Create Watch Face\"";
+"Ad" = "Anzeige";
+"Settings" = "Einstellung";
+"Success" = "Erfolg";
+"The subscription has been successfully paid for and is valid until" = "Das Abonnement wurde erfolgreich bezahlt und ist gültig bis";
+"Expired" = "Abgelaufen";
+"Your subscription has expired" = "Ihr Abonnement ist abgelaufen";
+"Mistake" = "Fehler";
+"The subscription was not paid for" = "Das Abonnement wurde nicht bezahlt";
+
+"Loading" = "Wird geladen";
+"Conversion to" = "Umstellung auf";
+"Done, set the watch face from the gallery" = "Fertig, stellen Sie das Zifferblatt von der Galerie";
+
+"Step 1" = "Schritt 1";
+"Choose your favorite watch face and click \"Save\"" = "Wählen Sie Ihre Lieblings-Uhr-Zifferblatt und klicken Sie auf \"Speichern\"";
+"Next" = "Weiter";
+"Step 2" = "Schritt 2";
+"Allow photo access to save your watch faces" = "Erlauben Sie den Zugriff auf Fotos, um die Zifferblätter der Uhr zu speichern";
+"Further" = "Weiter";
+"Step 3" = "Schritt 3";
+"Click on the saved watch face in the gallery." = "Tippen Sie in der Galerie auf das gespeicherte Zifferblatt der Uhr.";
+"Next, click on the \"Share\" button and select the \"Create Watch face\" option" = "Als Nächstes klicken Sie auf die Schaltfläche \"Teilen\" und wählen Sie die Option \"Zifferblatt erstellen\"";
+"Next" = "Weiter";
+"Step 4" = "Schritt 4";
+"Select the desired option and click \"Add\"" = "Wählen Sie die gewünschte Option und klicken Sie auf \"Hinzufügen\"";
+"Next" = "Weiter";
+"Installation guide" = "Installationsanleitung";

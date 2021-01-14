@@ -72,6 +72,7 @@ class LockingScreenPresenter: NSObject, ILockingScreenPresenter {
         }
         
         if rewardedAd.isReady {
+            interactor?.sendAdStartEvent()
             router?.presentAdScreen(rewardedAd: rewardedAd, delegate: self)
         } else {
             view?.mainView.loadingState = true
@@ -93,6 +94,7 @@ class LockingScreenPresenter: NSObject, ILockingScreenPresenter {
 
 extension LockingScreenPresenter: GADRewardedAdDelegate {
     func rewardedAd(_ rewardedAd: GADRewardedAd, userDidEarn reward: GADAdReward) {
+        interactor?.sendAdFinishEvent()
         didEarned = true
     }
     

@@ -38,7 +38,7 @@ class SecondScreenView: UIView {
     private (set) var topLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 17.0, weight: .bold)
-        label.text = "Задай индивидуальный стиль"
+        label.text = "Set an individual style".localized
         label.textColor = UIColor(named: "darkTextColor")
         return label
     }()
@@ -46,7 +46,7 @@ class SecondScreenView: UIView {
     private (set) var centerLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 33.0, weight: .bold)
-        label.text = "Разнообразные"
+        label.text = "Various".localized
         label.textColor = UIColor(named: "darkTextColor")
         return label
     }()
@@ -54,18 +54,18 @@ class SecondScreenView: UIView {
     private (set) var bottomLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 15.0, weight: .medium)
-        label.text = "Подбери циферблат соотвествующий твоему настроению или образу жизни"
+        label.text = "Pick up the dials that match your mood or lifestyle".localized
         label.numberOfLines = 0
         label.textColor = .lightGray
         return label
     }()
     
     private (set) var nextBtn: UIButton = {
-        let button = UIButton(type: .system)
+        let button = UIButton(type: .custom)
         button.layer.masksToBounds = true
         button.layer.cornerRadius = 12.0
         button.backgroundColor = UIColor(named: "baseGreen")
-        button.setTitle("Далее", for: .normal)
+        button.setTitle("Next".localized, for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 20.0, weight: .semibold)
         button.setTitleColor(.white, for: .normal)
         return button

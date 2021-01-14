@@ -34,6 +34,7 @@ class LeftMenuTVC: UITableViewCell {
 extension LeftMenuTVC {
     
     func config(_ val: String) {
+        backgroundColor = UIColor(hex: "F7F7F7")
         itemName.text = val
     }
     

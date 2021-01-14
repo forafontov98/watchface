@@ -21,9 +21,19 @@ class FacesGroupPresenter: NSObject, IFacesGroupPresenter {
     private var category: WatchCategory?
 
     init(view: FacesGroupVC, router: IFacesGroupRouter, interactor: IFacesGroupInteractor) {
+        super.init()
+        
         self.view = view
         self.router = router
         self.interactor = interactor
+        
+        Notify.add(self, #selector(self.updateViewIfNeeded), name: Keys.purchase_state_changed)
+
+    }
+    
+    @objc
+    func updateViewIfNeeded() {
+        view?.mainView.collectionView.reloadSections(IndexSet(integer: 0))
     }
     
     func cancelBtnPressed() {
@@ -48,6 +58,10 @@ extension FacesGroupPresenter {
 
         cell.watch = category?.watches[indexPath.row]
         
+        if SwiftyStoreService.shared.isPro {
+            cell.lockIcon.isHidden = true
+        }
+        
         return cell
     }
     
@@ -63,7 +77,9 @@ extension FacesGroupPresenter {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let watch = category?.watches[indexPath.row]
-        router?.presentWatchPreview(watch, groupName: category?.name)
+        let image = (collectionView.cellForItem(at: indexPath) as? WatchFaceCVC)?.previewImageView.image
+        
+        router?.presentWatchPreview(watch, image: image, groupName: category?.name)
         
         UIImpactFeedbackGenerator(style: .light).impactOccurred()
     }

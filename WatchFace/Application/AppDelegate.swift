@@ -8,6 +8,9 @@
 import UIKit
 import SideMenu
 import GoogleMobileAds
+import SwiftyStoreKit
+import YandexMobileMetrica
+import FBSDKCoreKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -25,16 +28,49 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         } else {
             window = UIWindow()
             
+            let vc = StartScreenBuilder().build()
+            
+            window?.rootViewController = vc
+            window?.makeKeyAndVisible()
+            
+            /*
             let vc = WatchFacesListBuilder().build()
             let nvc = UINavigationController(rootViewController: vc)
             
             window?.rootViewController = nvc
             window?.makeKeyAndVisible()
+            */
         }
         
         GADMobileAds.sharedInstance().start(completionHandler: nil)
         
+        // MARK:- AppMetrika config
+        let configuration = YMMYandexMetricaConfiguration.init(apiKey: SDKKeys.appMetrikaApiKey)
+        YMMYandexMetrica.activate(with: configuration!)
+        
+        // MARK:- InAppPurchases config
+        
+        SwiftyStoreKit.completeTransactions(atomically: true) { purchases in
+                for purchase in purchases {
+                    switch purchase.transaction.transactionState {
+                    case .purchased, .restored:
+                        if purchase.needsFinishTransaction {
+                            // Deliver content from server, then:
+                            SwiftyStoreKit.finishTransaction(purchase.transaction)
+                        }
+                        // Unlock content
+                    case .failed, .purchasing, .deferred:
+                        break // do nothing
+                    }
+                }
+            }
+        
+        /// Загрузка покупок из ItunesConnect
+        SwiftyStoreService.shared.fetchProducts()
+        
+        /// Проверка текущих подписок пользователя
+        SwiftyStoreService.shared.verifyPurchase()
+        
         return true
     }
 }
-

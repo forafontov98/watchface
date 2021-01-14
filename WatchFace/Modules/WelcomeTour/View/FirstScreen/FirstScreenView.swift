@@ -19,7 +19,7 @@ class FirstScreenView: UIView {
     private (set) var topLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 17.0, weight: .bold)
-        label.text = "Для Aplle Watch"
+        label.text = "For Apple Watch".localized
         label.textColor = UIColor(named: "darkTextColor")
         return label
     }()
@@ -27,7 +27,7 @@ class FirstScreenView: UIView {
     private (set) var centerLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 33.0, weight: .bold)
-        label.text = "Циферблаты"
+        label.text = "Clock faces".localized
         label.textColor = UIColor(named: "darkTextColor")
         return label
     }()
@@ -35,18 +35,18 @@ class FirstScreenView: UIView {
     private (set) var bottomLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 15.0, weight: .medium)
-        label.text = "Выбирай из большой и уникальной библиотеки великолепных циферблатов"
+        label.text = "Choose from a large library of unique and stunning dials".localized
         label.numberOfLines = 0
         label.textColor = .lightGray
         return label
     }()
     
     private (set) var nextBtn: UIButton = {
-        let button = UIButton(type: .system)
+        let button = UIButton(type: .custom)
         button.layer.masksToBounds = true
         button.layer.cornerRadius = 12.0
         button.backgroundColor = UIColor(named: "baseBlue")
-        button.setTitle("Далее", for: .normal)
+        button.setTitle("Next".localized, for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 20.0, weight: .semibold)
         return button

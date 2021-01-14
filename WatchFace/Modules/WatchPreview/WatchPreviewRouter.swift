@@ -18,6 +18,8 @@ protocol IWatchPreviewRouter {
     
     func presentAlertController(delegate: SetWatchACDelegate)
     func share(watchFace: UIImage)
+    
+    func presentGuideScreen()
 }
 
 class WatchPreviewRouter: NSObject, IWatchPreviewRouter {
@@ -62,7 +64,7 @@ class WatchPreviewRouter: NSObject, IWatchPreviewRouter {
     
     func presentAlertController(delegate: SetWatchACDelegate) {
         
-        let ac = SetWatchAC(title: "Найдите строку \"Create Watch Face\"\n\n\n\n",
+        let ac = SetWatchAC(title: "Find the line \"Create Watch Face\"".localized + "\n\n\n\n",
                             message: nil,
                             preferredStyle: .actionSheet)
         
@@ -76,5 +78,10 @@ class WatchPreviewRouter: NSObject, IWatchPreviewRouter {
                                                               applicationActivities: nil)
         
         self.view?.present(activityViewController, animated: true, completion: nil)
+    }
+    
+    func presentGuideScreen() {
+        let vc = GuideScreenBuilder().build()
+        self.view?.present(vc, animated: true, completion: nil)
     }
 }

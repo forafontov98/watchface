@@ -19,8 +19,13 @@ class WatchCategory: Codable {
 
 
 class WatchFace: Codable {
-    var url: String
+    var url_mini: String
+    var url_full: String
     var status: WFStatus
+    
+    func isGif() -> Bool {
+        return url_mini.contains("gif")
+    }
 }
 
 

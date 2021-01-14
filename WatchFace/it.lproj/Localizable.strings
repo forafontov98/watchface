@@ -1,0 +1,74 @@
+/* 
+  Localizable.strings
+  WatchFace
+
+  Created by MacBook on 08.01.2021.
+  
+*/
+
+"For Apple Watch" = "Per Apple Osservare";
+"Clock faces" = "Orologio facce";
+"Choose from a large library of unique and stunning dials" = "Scegli tra una vasta libreria di quadranti unici e mozzafiato";
+"Set an individual style" = "Impostare uno stile individuale";
+"Various" = "Vario";
+"Pick up the dials that match your mood or lifestyle" = "Raccogliete i quadranti che corrispondono vostro umore o stile di vita";
+"Premium subscription" = "Abbonamento premium";
+"Access to all clock faces" = "L'accesso a tutte le facce di clock";
+"No ad" = "Nessun annuncio";
+"Month subscription" = "Abbonamento di mese";
+"per month" = "al mese";
+"Annual subscription" = "Abbonamento annuale";
+"per year" = "per anno";
+"Week subscription" = "Abbonamento settimanale";
+"per week" = "a settimana";
+"Start your 3 days free trial" = "Inizia la tua prova gratuita di 3 giorni";
+"The plan renews automaticaly" = "Il piano si rinnova automaticamente";
+"Cancel any time" = "Annulla in qualsiasi momento";
+"Subscribe" = "Iscrivere";
+"Clock faces" = "Orologio facce";
+"More" = "Di Più";
+"Clock face of the day" = "Orologio faccia del giorno";
+"Clock face of the month" = "Orologio volto del mese";
+"Support" = "Supporto";
+"About subscription" = "A proposito di abbonamento";
+"Terms" = "Condizioni";
+"Privacy policy" = "Politica sulla riservatezza";
+"About" = "Circa l'applicazione";
+"Rate the app" = "Rete l'app";
+"Restore purchases" = "Ripristina acquisti";
+"Download" = "Scaricare";
+"To download the watch face, watch an ad or sign up for a subscription" = "Per scaricare il quadrante dell'orologio, guarda la pubblicità o l'abbonamento";
+"Subscribe" = "Sottoscrivere";
+"Next" = "Quindi";
+
+"Cancel" = "Annullare";
+"Don't show it again" = "Non mostrarlo di nuovo";
+"Ok" = "OK";
+"Find the line \"Create Watch Face\"" = "Trova la linea \" crea quadrante\"";
+"Ad" = "Annuncio";
+"Settings" = "Impostazioni";
+"Success" = "Successo";
+"The subscription has been successfully paid for and is valid until" = "L'abbonamento è stato pagato con successo ed è valido fino a quando";
+"Expired" = "Scadere";
+"Your subscription has expired" = "L'abbonamento è scaduto";
+"Mistake" = "Errore";
+"The subscription was not paid for" = "L'abbonamento non è stato pagato";
+
+"Loading" = "Caricamento in corso";
+"Conversion to" = "Conversione in";
+"Done, set the watch face from the gallery" = "Fatto, imposta il quadrante dalla galleria";
+
+"Step 1" = "Passo 1";
+"Choose your favorite watch face and click \"Save\"" = "Scegli il tuo quadrante preferito e fare clic su \"Salva\"";
+"Next" = "Quindi";
+"Step 2" = "Passo 2";
+"Allow photo access to save your watch faces" = "Consenti l'accesso alle foto per salvare i quadranti dell'orologio";
+"Further" = "Quindi";
+"Step 3" = "Passo 3";
+"Click on the saved watch face in the gallery." = "Toccare nella galleria sul quadrante dell'orologio salvato.";
+"Next, click on the \"Share\" button and select the \"Create Watch face\" option" = "Quindi fare clic sul pulsante \"Condividi\" e selezionare L'opzione \"Crea quadrante dell'orologio\"";
+"Next" = "Quindi";
+"Step 4" = "Passo 4";
+"Select the desired option and click \"Add\"" = "Selezionare l'opzione desiderata e fare clic su \"Aggiungi\"";
+"Next" = "Quindi";
+"Installation guide" = "Guida d'installazione";

@@ -7,7 +7,6 @@
 
 import UIKit
 import SideMenu
-import SkeletonView
 
 class WatchFacesListVC: UIViewController {
 
@@ -40,9 +39,6 @@ class WatchFacesListVC: UIViewController {
         addTargets()
         
         presenter?.getWatchList()
-        
-        //presenter?.presentWelcomeTour()
-        
     }
     
     override func loadView() {
@@ -51,6 +47,8 @@ class WatchFacesListVC: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
+        //presenter?.presentWelcomeTourIfNeeded()
     }
     
     func setPresenter(_ presenter: IWatchFacesListPresenter) {

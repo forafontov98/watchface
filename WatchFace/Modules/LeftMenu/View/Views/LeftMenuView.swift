@@ -21,6 +21,7 @@ class LeftMenuView: UIView {
         tableView.tableHeaderView = LeftMenuTopView()
         tableView.tableHeaderView?.frame.size.height = 120.0
         
+        
         return tableView
     }()
     
@@ -37,7 +38,7 @@ class LeftMenuView: UIView {
     init() {
         super.init(frame: .zero)
         
-        backgroundColor = .white
+        backgroundColor = UIColor(hex: "F7F7F7")
         
         makeConstraints()
     }

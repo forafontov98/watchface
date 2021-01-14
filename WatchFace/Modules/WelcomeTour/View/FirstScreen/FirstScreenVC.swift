@@ -30,7 +30,7 @@ class FirstScreenVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+                
         addTargets()
         heroViewsConfig()
     }

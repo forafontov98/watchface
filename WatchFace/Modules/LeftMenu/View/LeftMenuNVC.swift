@@ -14,10 +14,10 @@ class LeftMenuNVC: SideMenuNavigationController {
         super.viewDidLoad()
 
         animationOptions = .curveEaseInOut
+        presentationStyle = .viewSlideOutMenuPartialIn
+
         menuWidth = UIScreen.main.bounds.width - 40.0
         leftSide = true
-        
-        //presentationStyle = .menuSlideIn
         
         setNavigationBarHidden(true, animated: false)
     }

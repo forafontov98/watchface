@@ -13,7 +13,7 @@ class WatchFacesTopView: UIView {
 
     private let topLabel: UILabel = {
         let label = UILabel()
-        label.text = "Циферблаты"
+        label.text = "Clock faces".localized
         label.textColor = UIColor(named: "darkTextColor")
         label.textAlignment = .left
         label.font = .systemFont(ofSize: 33.0, weight: .bold)
@@ -71,11 +71,9 @@ class WatchFacesTopView: UIView {
         super.init(frame: .zero)
         
         backgroundColor = .clear
+        collectionView.clipsToBounds = false
         
         makeConstraints()
-        
-        collectionView.isSkeletonable = true
-        //topLabel.isSkeletonable = true
     }
     
     required init?(coder: NSCoder) {

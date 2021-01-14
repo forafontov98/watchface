@@ -59,7 +59,7 @@ class LockingScreenRouter: NSObject, ILockingScreenRouter {
     }
     
     func presentSubscriptionScreen() {
-        let vc = WelcomeTourBuilder().build(screen: .third)
+        let vc = WelcomeTourBuilder().build(screen: .third, source: .app)
         view?.present(vc, animated: true, completion: nil)
     }
     

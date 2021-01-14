@@ -38,12 +38,16 @@ class SetWatchAC: UIAlertController {
     }
     
     private func addActions() {
-        addAction(UIAlertAction(title: "Больше не показывать", style: .default, handler: {_ in
+        addAction(UIAlertAction(title: "Don't show it again".localized, style: .default, handler: {_ in
             self.delegate?.notShowAgain()
         }))
         
-        addAction(UIAlertAction(title: "Понятно", style: .cancel, handler: {_ in
+        addAction(UIAlertAction(title: "Download".localized, style: .default, handler: {_ in
             self.delegate?.gotIt()
+        }))
+        
+        addAction(UIAlertAction(title: "Cancel".localized, style: .cancel, handler: {_ in
+            
         }))
     }
 }

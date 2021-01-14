@@ -11,9 +11,9 @@ import SideMenu
 protocol IWatchFacesListRouter {
     func presentMenu()
     func presentFacesGroup(_ category: WatchCategory)
-    func presentWatchPreview(_ watch: WatchFace?, groupName: String?)
-    
-    func presentWelcomeTour()
+    func presentWatchPreview(_ watch: WatchFace?, image: UIImage?, groupName: String?)
+
+    //func presentWelcomeTour()
 }
 
 class WatchFacesListRouter: IWatchFacesListRouter {
@@ -34,13 +34,15 @@ class WatchFacesListRouter: IWatchFacesListRouter {
         view?.navigationController?.pushViewController(vc, animated: true)
     }
     
-    func presentWatchPreview(_ watch: WatchFace?, groupName: String?) {
-        let vc = WatchPreviewBuilder().build(watch: watch, groupName: groupName)
+    func presentWatchPreview(_ watch: WatchFace?, image: UIImage?, groupName: String?) {
+        let vc = WatchPreviewBuilder().build(watch: watch, image: image, groupName: groupName)
         view?.present(vc, animated: true, completion: nil)
     }
     
+    /*
     func presentWelcomeTour() {
         let vc = WelcomeTourBuilder().build(screen: .first)
         view?.present(vc, animated: true, completion: nil)
     }
+    */
 }

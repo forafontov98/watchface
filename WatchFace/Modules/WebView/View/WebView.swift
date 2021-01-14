@@ -16,7 +16,7 @@ class WebView: UIView {
     
     private (set) var cancelBtn: UIButton = {
         let button = UIButton(type: .system)
-        button.setTitle("Cancel", for: .normal)
+        button.setTitle("Cancel".localized, for: .normal)
         return button
     }()
     

@@ -11,7 +11,6 @@ class WatchPreviewView: UIView {
 
     private (set) var topLabel: UILabel = {
         let label = UILabel()
-        label.text = "Some group"
         label.textColor = UIColor(named: "darkTextColor")
         label.textAlignment = .left
         label.font = .systemFont(ofSize: 33.0, weight: .bold)
@@ -21,13 +20,19 @@ class WatchPreviewView: UIView {
     
     private (set) var cancelBtn: UIButton = {
         let button = UIButton()
-        button.setImage(UIImage(named: "cancel_btn"), for: .normal)
-        button.heroID = "cancel_btn"
         return button
     }()
     
+    private (set) var cancelIcon: UIImageView = {
+        let icon = UIImageView()
+        icon.image = UIImage(named: "cancel_btn")
+        icon.contentMode = .scaleAspectFit
+        icon.heroID = "cancel_btn"
+        return icon
+    }()
+    
     private (set) var blurView: UIVisualEffectView = {
-        let effect = UIBlurEffect(style: .extraLight)
+        let effect = UIBlurEffect(style: .light)
         let view = UIVisualEffectView(effect: effect)
         return view
     }()
@@ -36,6 +41,7 @@ class WatchPreviewView: UIView {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
         imageView.layer.masksToBounds = true
+        imageView.backgroundColor = UIColor.lightGray.withAlphaComponent(0.35)
         return imageView
     }()
     
@@ -55,6 +61,15 @@ class WatchPreviewView: UIView {
         return label
     }()
     
+    private (set) var stepLabel: UILabel = {
+        let label = UILabel()
+        label.textColor = .darkGray
+        label.font = .systemFont(ofSize: 16.0, weight: .regular)
+        label.textAlignment = .center
+        label.numberOfLines = 0
+        return label
+    }()
+    
     private (set) var lockIcon: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
@@ -62,13 +77,13 @@ class WatchPreviewView: UIView {
         return imageView
     }()
     
-    private (set) var downloadBtn: UIButton = {
-        let button = UIButton(type: .system)
+    private (set) var downloadBtn: LoadingButton = {
+        let button = LoadingButton(type: .system)
         button.setTitleColor(.white, for: .normal)
         button.layer.masksToBounds = true
         button.layer.cornerRadius = 12.0
         button.backgroundColor = UIColor(named: "baseGreen")
-        button.setTitle("Скачать", for: .normal)
+        button.setTitle("Download".localized, for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 20.0, weight: .semibold)
         return button
     }()
@@ -99,11 +114,18 @@ class WatchPreviewView: UIView {
             $0.edges.equalToSuperview()
         }
         
+        addSubview(cancelIcon)
+        
+        cancelIcon.snp.makeConstraints {
+            $0.right.equalTo(self.snp.right).offset(-16.0)
+            $0.width.height.equalTo(20.0)
+        }
+        
         addSubview(cancelBtn)
         
         cancelBtn.snp.makeConstraints {
-            $0.right.equalTo(self.snp.right).offset(-16.0)
-            $0.width.height.equalTo(20.0)
+            $0.center.equalTo(cancelIcon.snp.center)
+            $0.width.height.equalTo(50.0)
         }
         
         addSubview(topLabel)
@@ -111,11 +133,11 @@ class WatchPreviewView: UIView {
         topLabel.snp.makeConstraints {
             $0.left.equalTo(self.snp.left).offset(16.0)
             $0.top.equalTo(self.snp.topMargin).offset(40.0)
-            $0.right.equalTo(self.cancelBtn.snp.left).offset(-16.0)
+            $0.right.equalTo(self.cancelIcon.snp.left).offset(-16.0)
             $0.height.equalTo(39.0)
         }
         
-        cancelBtn.snp.makeConstraints {
+        cancelIcon.snp.makeConstraints {
             $0.centerY.equalTo(self.topLabel)
         }
         
@@ -137,6 +159,14 @@ class WatchPreviewView: UIView {
         
         downloadBtn.snp.makeConstraints {
             $0.right.equalTo(self.questionBtn.snp.left).offset(-16.0)
+        }
+        
+        addSubview(stepLabel)
+        
+        stepLabel.snp.makeConstraints {
+            $0.left.equalToSuperview().offset(20.0)
+            $0.right.equalToSuperview().offset(-20.0)
+            $0.bottom.equalTo(self.downloadBtn.snp.top).offset(-20.0)
         }
         
         addSubview(imageView)
@@ -192,6 +222,11 @@ extension WatchPreviewView {
     func addDownloadBtnTarget(target: Any?, action: Selector) {
         downloadBtn.addTarget(target, action: action, for: .touchUpInside)
     }
+    
+    func addQuestionBtnTarget(target: Any?, action: Selector) {
+        questionBtn.addTarget(target, action: action, for: .touchUpInside)
+    }
+    
 }
 
 extension WatchPreviewView {

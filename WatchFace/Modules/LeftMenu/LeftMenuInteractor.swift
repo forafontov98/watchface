@@ -9,12 +9,17 @@ import UIKit
 
 protocol ILeftMenuInteractor {
     func rateTheApp()
+    func restorePurchases(callback: @escaping RestoreResult)
+
 }
 
 class LeftMenuInteractor: NSObject, ILeftMenuInteractor {
     
     func rateTheApp() {
-        AppStoreReviewManager().rateApp(appId: "1544672333")
+        AppStoreReviewService().rateApp(appId: "1544672333")
     }
 
+    func restorePurchases(callback: @escaping RestoreResult) {
+        SwiftyStoreService.shared.restorePurchases(callback: callback)
+    }
 }

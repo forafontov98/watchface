@@ -11,11 +11,14 @@ protocol IWelcomeTourRouter {
     func presentSecondScreen()
     func presentThirdScreen()
     
-    func dismissToRoot()
     func dismiss()
     
     func presentPrivacyScreen()
     func presentTermsScreen()
+    
+    func presentAlert(title: String?, message: String?, completion: (()->Void)?)
+    func dismissToClass(_ name: AnyClass)
+
 }
 
 class WelcomeTourRouter: NSObject, IWelcomeTourRouter {
@@ -36,12 +39,16 @@ class WelcomeTourRouter: NSObject, IWelcomeTourRouter {
         view?.present(vc, animated: true, completion: nil)
     }
     
-    func dismissToRoot() {
-        view?.hero_unwindToRootViewController()
+    func dismiss() {
+        if let _ = view?.presentingViewController as? SecondScreenVC {
+            view?.hero_unwindToRootViewController()
+        } else {
+            view?.dismiss(animated: true)
+        }
     }
     
-    func dismiss() {
-        view?.dismiss(animated: true, completion: nil)
+    func dismissToClass(_ name: AnyClass) {
+        view?.hero_unwindToViewController(withClass: name)
     }
     
     func presentPrivacyScreen() {
@@ -55,5 +62,20 @@ class WelcomeTourRouter: NSObject, IWelcomeTourRouter {
     private func presentWebView(url: String) {
         let vc = WebViewBuilder().build(url: url)
         view?.present(vc, animated: true, completion: nil)
+    }
+    
+    func presentAlert(title: String?, message: String?, completion: (()->Void)? = nil) {
+        let alertVC = UIAlertController(
+            title: title,
+            message: message,
+            preferredStyle: .alert)
+        
+        alertVC.addAction(UIAlertAction(title: "Ok".localized, style: .cancel, handler: { (_) in
+            if let completion = completion {
+                completion()
+            }
+        }))
+        
+        view?.present(alertVC, animated: true)
     }
 }

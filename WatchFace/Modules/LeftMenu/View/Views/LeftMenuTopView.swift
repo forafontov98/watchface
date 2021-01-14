@@ -17,7 +17,7 @@ class LeftMenuTopView: UIView {
     
     private let settingsLabel: UILabel = {
         let label = UILabel()
-        label.text = "Settings"
+        label.text = "Settings".localized
         label.font = .systemFont(ofSize: 33.0, weight: .bold)
         label.textColor = UIColor(named: "darkTextColor")
         return label

@@ -10,7 +10,7 @@ import UIKit
 protocol IFacesGroupRouter {
     func cancelBtnPressed()
     
-    func presentWatchPreview(_ watch: WatchFace?, groupName: String?)
+    func presentWatchPreview(_ watch: WatchFace?, image: UIImage?, groupName: String?)
 }
 
 class FacesGroupRouter: IFacesGroupRouter {
@@ -25,8 +25,8 @@ class FacesGroupRouter: IFacesGroupRouter {
         view?.dismiss(animated: true, completion: nil)
     }
     
-    func presentWatchPreview(_ watch: WatchFace?, groupName: String?) {
-        let vc = WatchPreviewBuilder().build(watch: watch, groupName: groupName)
+    func presentWatchPreview(_ watch: WatchFace?, image: UIImage?, groupName: String?) {
+        let vc = WatchPreviewBuilder().build(watch: watch, image: image, groupName: groupName)
         view?.present(vc, animated: true, completion: nil)
     }
 }

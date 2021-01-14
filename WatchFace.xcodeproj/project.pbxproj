@@ -49,7 +49,7 @@
 		FA7F1C8D25A1DA2200ECECD3 /* WebViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F1C8C25A1DA2200ECECD3 /* WebViewPresenter.swift */; };
 		FA7F1C9025A1DA2D00ECECD3 /* WebViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F1C8F25A1DA2D00ECECD3 /* WebViewRouter.swift */; };
 		FA7F1C9325A1DA3400ECECD3 /* WebViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F1C9225A1DA3400ECECD3 /* WebViewBuilder.swift */; };
-		FA7F1C9825A1E74200ECECD3 /* AppStoreReviewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F1C9725A1E74200ECECD3 /* AppStoreReviewManager.swift */; };
+		FA7F1C9825A1E74200ECECD3 /* AppStoreReviewService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F1C9725A1E74200ECECD3 /* AppStoreReviewService.swift */; };
 		FA7F1C9B25A1E81C00ECECD3 /* LeftMenuInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F1C9A25A1E81C00ECECD3 /* LeftMenuInteractor.swift */; };
 		FA7F1CC525A5AA3A00ECECD3 /* SpinnerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F1CC425A5AA3A00ECECD3 /* SpinnerVC.swift */; };
 		FA7F1CCA25A5AA4E00ECECD3 /* SpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F1CC925A5AA4E00ECECD3 /* SpinnerView.swift */; };
@@ -57,6 +57,31 @@
 		FA7F1CE325A5CB3000ECECD3 /* SetWatchAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F1CE225A5CB3000ECECD3 /* SetWatchAC.swift */; };
 		FA7F1CF825A709BE00ECECD3 /* SwiftyStoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F1CF725A709BE00ECECD3 /* SwiftyStoreService.swift */; };
 		FA7F1D0225A7199F00ECECD3 /* GroupCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F1D0125A7199F00ECECD3 /* GroupCVC.swift */; };
+		FA7F1D4025A7B18300ECECD3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA7F1D4225A7B18300ECECD3 /* Localizable.strings */; };
+		FA7F1D5E25A8795100ECECD3 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA7F1D5D25A8795100ECECD3 /* StoreKit.framework */; };
+		FA7F1D6125A888FB00ECECD3 /* InAppProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F1D6025A888FB00ECECD3 /* InAppProduct.swift */; };
+		FA7F1D6425AB889100ECECD3 /* RestoreResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F1D6325AB889100ECECD3 /* RestoreResponse.swift */; };
+		FA7F1DA425ADB1F600ECECD3 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F1DA325ADB1F600ECECD3 /* Keys.swift */; };
+		FA7F1DC225AF20BA00ECECD3 /* VideoGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F1DC125AF20BA00ECECD3 /* VideoGenerator.swift */; };
+		FA7F1DC525AF20BF00ECECD3 /* VideoGeneratorError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F1DC425AF20BF00ECECD3 /* VideoGeneratorError.swift */; };
+		FA7F1DC825AF20CC00ECECD3 /* AVAssetExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F1DC725AF20CC00ECECD3 /* AVAssetExtension.swift */; };
+		FA7F1DCB25AF20D200ECECD3 /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F1DCA25AF20D200ECECD3 /* ImageExtension.swift */; };
+		FA7F1DCF25AF211500ECECD3 /* LivePhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F1DCE25AF211500ECECD3 /* LivePhoto.swift */; };
+		FA7F1DF125AF369E00ECECD3 /* Gif2LiveService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F1DF025AF369E00ECECD3 /* Gif2LiveService.swift */; };
+		FA7F1DF725AF861300ECECD3 /* GuideScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA7F1DF625AF861300ECECD3 /* GuideScreen.storyboard */; };
+		FA7F1DFA25AF862000ECECD3 /* GuideScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F1DF925AF862000ECECD3 /* GuideScreenVC.swift */; };
+		FA7F1DFD25AF863E00ECECD3 /* GuideScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F1DFC25AF863E00ECECD3 /* GuideScreenPresenter.swift */; };
+		FA7F1E0025AF864600ECECD3 /* GuideScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F1DFF25AF864600ECECD3 /* GuideScreenRouter.swift */; };
+		FA7F1E0325AF864E00ECECD3 /* GuideScreenBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F1E0225AF864E00ECECD3 /* GuideScreenBuilder.swift */; };
+		FA7F1E0625AF90D100ECECD3 /* GuideCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F1E0525AF90D100ECECD3 /* GuideCVC.swift */; };
+		FA7F1E0925AF918D00ECECD3 /* GuideScreenEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F1E0825AF918D00ECECD3 /* GuideScreenEntity.swift */; };
+		FA7F1E1D25B0631400ECECD3 /* AppEventsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F1E1C25B0631400ECECD3 /* AppEventsService.swift */; };
+		FA7F1E2125B063F800ECECD3 /* AppStoreReviewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F1E2025B063F800ECECD3 /* AppStoreReviewBuilder.swift */; };
+		FA7F1E5225B0831400ECECD3 /* StartScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F1E5125B0831400ECECD3 /* StartScreenVC.swift */; };
+		FA7F1E5625B0839800ECECD3 /* StartScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F1E5525B0839800ECECD3 /* StartScreenView.swift */; };
+		FA7F1E5B25B0847300ECECD3 /* StartScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F1E5A25B0847300ECECD3 /* StartScreenPresenter.swift */; };
+		FA7F1E5E25B0847B00ECECD3 /* StartScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F1E5D25B0847B00ECECD3 /* StartScreenRouter.swift */; };
+		FA7F1E6125B0848300ECECD3 /* StartScreenBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7F1E6025B0848300ECECD3 /* StartScreenBuilder.swift */; };
 		FAA95DB2258215C80028B4D4 /* WatchPreviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA95DB1258215C80028B4D4 /* WatchPreviewVC.swift */; };
 		FAA95DB5258215D80028B4D4 /* WatchPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA95DB4258215D80028B4D4 /* WatchPreviewView.swift */; };
 		FAA95DB8258215F90028B4D4 /* WatchPreviewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA95DB7258215F90028B4D4 /* WatchPreviewBuilder.swift */; };
@@ -128,7 +153,7 @@
 		FA7F1C8C25A1DA2200ECECD3 /* WebViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewPresenter.swift; sourceTree = "<group>"; };
 		FA7F1C8F25A1DA2D00ECECD3 /* WebViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewRouter.swift; sourceTree = "<group>"; };
 		FA7F1C9225A1DA3400ECECD3 /* WebViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewBuilder.swift; sourceTree = "<group>"; };
-		FA7F1C9725A1E74200ECECD3 /* AppStoreReviewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreReviewManager.swift; sourceTree = "<group>"; };
+		FA7F1C9725A1E74200ECECD3 /* AppStoreReviewService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreReviewService.swift; sourceTree = "<group>"; };
 		FA7F1C9A25A1E81C00ECECD3 /* LeftMenuInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftMenuInteractor.swift; sourceTree = "<group>"; };
 		FA7F1CC425A5AA3A00ECECD3 /* SpinnerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerVC.swift; sourceTree = "<group>"; };
 		FA7F1CC925A5AA4E00ECECD3 /* SpinnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerView.swift; sourceTree = "<group>"; };
@@ -136,6 +161,48 @@
 		FA7F1CE225A5CB3000ECECD3 /* SetWatchAC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetWatchAC.swift; sourceTree = "<group>"; };
 		FA7F1CF725A709BE00ECECD3 /* SwiftyStoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyStoreService.swift; sourceTree = "<group>"; };
 		FA7F1D0125A7199F00ECECD3 /* GroupCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCVC.swift; sourceTree = "<group>"; };
+		FA7F1D3425A7B09C00ECECD3 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		FA7F1D3525A7B0EF00ECECD3 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		FA7F1D3625A7B0FC00ECECD3 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		FA7F1D3725A7B10B00ECECD3 /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		FA7F1D3825A7B11400ECECD3 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		FA7F1D3925A7B11C00ECECD3 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		FA7F1D3A25A7B12E00ECECD3 /* zh-HK */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-HK"; path = "zh-HK.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		FA7F1D3B25A7B13B00ECECD3 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		FA7F1D3C25A7B14500ECECD3 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		FA7F1D4125A7B18300ECECD3 /* zh-HK */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-HK"; path = "zh-HK.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		FA7F1D4325A7B18800ECECD3 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		FA7F1D4425A7B18A00ECECD3 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		FA7F1D4525A7B18F00ECECD3 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FA7F1D4625A7B19000ECECD3 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FA7F1D4725A7B19200ECECD3 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FA7F1D4825A7B19300ECECD3 /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		FA7F1D4925A7B19500ECECD3 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FA7F1D4A25A7B19700ECECD3 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FA7F1D5D25A8795100ECECD3 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		FA7F1D6025A888FB00ECECD3 /* InAppProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppProduct.swift; sourceTree = "<group>"; };
+		FA7F1D6325AB889100ECECD3 /* RestoreResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestoreResponse.swift; sourceTree = "<group>"; };
+		FA7F1DA325ADB1F600ECECD3 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
+		FA7F1DC125AF20BA00ECECD3 /* VideoGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoGenerator.swift; sourceTree = "<group>"; };
+		FA7F1DC425AF20BF00ECECD3 /* VideoGeneratorError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoGeneratorError.swift; sourceTree = "<group>"; };
+		FA7F1DC725AF20CC00ECECD3 /* AVAssetExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVAssetExtension.swift; sourceTree = "<group>"; };
+		FA7F1DCA25AF20D200ECECD3 /* ImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageExtension.swift; sourceTree = "<group>"; };
+		FA7F1DCE25AF211500ECECD3 /* LivePhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LivePhoto.swift; sourceTree = "<group>"; };
+		FA7F1DF025AF369E00ECECD3 /* Gif2LiveService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gif2LiveService.swift; sourceTree = "<group>"; };
+		FA7F1DF625AF861300ECECD3 /* GuideScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GuideScreen.storyboard; sourceTree = "<group>"; };
+		FA7F1DF925AF862000ECECD3 /* GuideScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideScreenVC.swift; sourceTree = "<group>"; };
+		FA7F1DFC25AF863E00ECECD3 /* GuideScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideScreenPresenter.swift; sourceTree = "<group>"; };
+		FA7F1DFF25AF864600ECECD3 /* GuideScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideScreenRouter.swift; sourceTree = "<group>"; };
+		FA7F1E0225AF864E00ECECD3 /* GuideScreenBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideScreenBuilder.swift; sourceTree = "<group>"; };
+		FA7F1E0525AF90D100ECECD3 /* GuideCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideCVC.swift; sourceTree = "<group>"; };
+		FA7F1E0825AF918D00ECECD3 /* GuideScreenEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideScreenEntity.swift; sourceTree = "<group>"; };
+		FA7F1E1C25B0631400ECECD3 /* AppEventsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEventsService.swift; sourceTree = "<group>"; };
+		FA7F1E2025B063F800ECECD3 /* AppStoreReviewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreReviewBuilder.swift; sourceTree = "<group>"; };
+		FA7F1E5125B0831400ECECD3 /* StartScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenVC.swift; sourceTree = "<group>"; };
+		FA7F1E5525B0839800ECECD3 /* StartScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenView.swift; sourceTree = "<group>"; };
+		FA7F1E5A25B0847300ECECD3 /* StartScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenPresenter.swift; sourceTree = "<group>"; };
+		FA7F1E5D25B0847B00ECECD3 /* StartScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenRouter.swift; sourceTree = "<group>"; };
+		FA7F1E6025B0848300ECECD3 /* StartScreenBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenBuilder.swift; sourceTree = "<group>"; };
 		FAA95DB1258215C80028B4D4 /* WatchPreviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchPreviewVC.swift; sourceTree = "<group>"; };
 		FAA95DB4258215D80028B4D4 /* WatchPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchPreviewView.swift; sourceTree = "<group>"; };
 		FAA95DB7258215F90028B4D4 /* WatchPreviewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchPreviewBuilder.swift; sourceTree = "<group>"; };
@@ -166,6 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				73B6920CEAAA08F6BE1E9BB3 /* Pods_WatchFace.framework in Frameworks */,
+				FA7F1D5E25A8795100ECECD3 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,6 +252,7 @@
 		9CF23CA04FE90629EBA9557C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FA7F1D5D25A8795100ECECD3 /* StoreKit.framework */,
 				26023DEE132B04ACB3A1BC8D /* Pods_WatchFace.framework */,
 			);
 			name = Frameworks;
@@ -215,6 +284,7 @@
 				FA4C4710257F8BE700119A1F /* Modules */,
 				FA4C4712257F8BFB00119A1F /* Services */,
 				FA4C4713257F8C0700119A1F /* Entities */,
+				FA7F1D4225A7B18300ECECD3 /* Localizable.strings */,
 			);
 			path = WatchFace;
 			sourceTree = "<group>";
@@ -234,6 +304,7 @@
 		FA4C4710257F8BE700119A1F /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				FA7F1E5025B0830200ECECD3 /* StartScreen */,
 				FA7F1CC325A5AA1600ECECD3 /* Spinner */,
 				FA7F1C8125A1D9BB00ECECD3 /* WebView */,
 				FA4C474D2580A6D300119A1F /* LeftMenu */,
@@ -242,6 +313,7 @@
 				FA4C476C2580B80600119A1F /* FacesGroup */,
 				FAA95DAF2582159F0028B4D4 /* WatchPreview */,
 				FAA95DE225835EBE0028B4D4 /* LockingScreen */,
+				FA7F1DF425AF85D700ECECD3 /* GuideScreen */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -249,10 +321,16 @@
 		FA4C4712257F8BFB00119A1F /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				FA7F1E1F25B063E800ECECD3 /* AppStoreReviewService */,
+				FA7F1E1B25B062F900ECECD3 /* AppEventsService */,
+				FA7F1DCD25AF210D00ECECD3 /* LivePhoto */,
+				FA7F1DC025AF209600ECECD3 /* VideoGenerator */,
 				FA7F1C66259B2DD600ECECD3 /* HTTP */,
 				FA7F1C6F259B2E6300ECECD3 /* WatchListService */,
 				FA7F1CF625A709A000ECECD3 /* SwiftyStoreService */,
+				FA7F1DEF25AF368100ECECD3 /* Gif2LiveService */,
 				FA4C4738257F9E5A00119A1F /* Extensions.swift */,
+				FA7F1DA325ADB1F600ECECD3 /* Keys.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -261,7 +339,7 @@
 			isa = PBXGroup;
 			children = (
 				FA7F1C77259B2F9600ECECD3 /* WatchList.swift */,
-				FA7F1C9725A1E74200ECECD3 /* AppStoreReviewManager.swift */,
+				FA7F1E0825AF918D00ECECD3 /* GuideScreenEntity.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -430,8 +508,95 @@
 			isa = PBXGroup;
 			children = (
 				FA7F1CF725A709BE00ECECD3 /* SwiftyStoreService.swift */,
+				FA7F1D6025A888FB00ECECD3 /* InAppProduct.swift */,
+				FA7F1D6325AB889100ECECD3 /* RestoreResponse.swift */,
 			);
 			path = SwiftyStoreService;
+			sourceTree = "<group>";
+		};
+		FA7F1DC025AF209600ECECD3 /* VideoGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				FA7F1DC125AF20BA00ECECD3 /* VideoGenerator.swift */,
+				FA7F1DC425AF20BF00ECECD3 /* VideoGeneratorError.swift */,
+				FA7F1DC725AF20CC00ECECD3 /* AVAssetExtension.swift */,
+				FA7F1DCA25AF20D200ECECD3 /* ImageExtension.swift */,
+			);
+			path = VideoGenerator;
+			sourceTree = "<group>";
+		};
+		FA7F1DCD25AF210D00ECECD3 /* LivePhoto */ = {
+			isa = PBXGroup;
+			children = (
+				FA7F1DCE25AF211500ECECD3 /* LivePhoto.swift */,
+			);
+			path = LivePhoto;
+			sourceTree = "<group>";
+		};
+		FA7F1DEF25AF368100ECECD3 /* Gif2LiveService */ = {
+			isa = PBXGroup;
+			children = (
+				FA7F1DF025AF369E00ECECD3 /* Gif2LiveService.swift */,
+			);
+			path = Gif2LiveService;
+			sourceTree = "<group>";
+		};
+		FA7F1DF425AF85D700ECECD3 /* GuideScreen */ = {
+			isa = PBXGroup;
+			children = (
+				FA7F1DF525AF860700ECECD3 /* View */,
+				FA7F1DFC25AF863E00ECECD3 /* GuideScreenPresenter.swift */,
+				FA7F1DFF25AF864600ECECD3 /* GuideScreenRouter.swift */,
+				FA7F1E0225AF864E00ECECD3 /* GuideScreenBuilder.swift */,
+			);
+			path = GuideScreen;
+			sourceTree = "<group>";
+		};
+		FA7F1DF525AF860700ECECD3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA7F1DF625AF861300ECECD3 /* GuideScreen.storyboard */,
+				FA7F1DF925AF862000ECECD3 /* GuideScreenVC.swift */,
+				FA7F1E0525AF90D100ECECD3 /* GuideCVC.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FA7F1E1B25B062F900ECECD3 /* AppEventsService */ = {
+			isa = PBXGroup;
+			children = (
+				FA7F1E1C25B0631400ECECD3 /* AppEventsService.swift */,
+			);
+			path = AppEventsService;
+			sourceTree = "<group>";
+		};
+		FA7F1E1F25B063E800ECECD3 /* AppStoreReviewService */ = {
+			isa = PBXGroup;
+			children = (
+				FA7F1E2025B063F800ECECD3 /* AppStoreReviewBuilder.swift */,
+				FA7F1C9725A1E74200ECECD3 /* AppStoreReviewService.swift */,
+			);
+			path = AppStoreReviewService;
+			sourceTree = "<group>";
+		};
+		FA7F1E5025B0830200ECECD3 /* StartScreen */ = {
+			isa = PBXGroup;
+			children = (
+				FA7F1E5825B0845D00ECECD3 /* View */,
+				FA7F1E5A25B0847300ECECD3 /* StartScreenPresenter.swift */,
+				FA7F1E5D25B0847B00ECECD3 /* StartScreenRouter.swift */,
+				FA7F1E6025B0848300ECECD3 /* StartScreenBuilder.swift */,
+			);
+			path = StartScreen;
+			sourceTree = "<group>";
+		};
+		FA7F1E5825B0845D00ECECD3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA7F1E5125B0831400ECECD3 /* StartScreenVC.swift */,
+				FA7F1E5525B0839800ECECD3 /* StartScreenView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		FAA95DAF2582159F0028B4D4 /* WatchPreview */ = {
@@ -570,6 +735,15 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
+				de,
+				es,
+				"pt-PT",
+				it,
+				fr,
+				"zh-HK",
+				"zh-Hans",
+				"zh-Hant",
 			);
 			mainGroup = FA4C46E8257F8B4600119A1F;
 			productRefGroup = FA4C46F2257F8B4600119A1F /* Products */;
@@ -587,7 +761,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA4C4701257F8B4A00119A1F /* LaunchScreen.storyboard in Resources */,
+				FA7F1D4025A7B18300ECECD3 /* Localizable.strings in Resources */,
 				FA4C46FE257F8B4A00119A1F /* Assets.xcassets in Resources */,
+				FA7F1DF725AF861300ECECD3 /* GuideScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -666,6 +842,8 @@
 				FA7F1CCE25A5B12F00ECECD3 /* LoadingButton.swift in Sources */,
 				FA4C47572580A76C00119A1F /* LeftMenuRouter.swift in Sources */,
 				FAA95DF5258360BC0028B4D4 /* LockingScreenBuilder.swift in Sources */,
+				FA7F1E5625B0839800ECECD3 /* StartScreenView.swift in Sources */,
+				FA7F1DC225AF20BA00ECECD3 /* VideoGenerator.swift in Sources */,
 				FA4C47752580B94800119A1F /* FacesGroupPresenter.swift in Sources */,
 				FAA95DFE2583738E0028B4D4 /* FirstScreenVC.swift in Sources */,
 				FA4C47652580AD4C00119A1F /* LeftMenuPresenter.swift in Sources */,
@@ -678,49 +856,69 @@
 				FA4C47692580AF4A00119A1F /* LeftMenuTVC.swift in Sources */,
 				FA7F1CE325A5CB3000ECECD3 /* SetWatchAC.swift in Sources */,
 				FA4C47542580A72100119A1F /* LeftMenuView.swift in Sources */,
+				FA7F1E0625AF90D100ECECD3 /* GuideCVC.swift in Sources */,
 				FA4C475D2580A8DB00119A1F /* LeftMenuNVC.swift in Sources */,
 				FAA95E1325837B350028B4D4 /* FirstScreenView.swift in Sources */,
+				FA7F1E5225B0831400ECECD3 /* StartScreenVC.swift in Sources */,
 				FA4C46F5257F8B4600119A1F /* AppDelegate.swift in Sources */,
 				FA4C47722580B91A00119A1F /* FacesGroupView.swift in Sources */,
+				FA7F1DA425ADB1F600ECECD3 /* Keys.swift in Sources */,
 				FAA95DEC258360A30028B4D4 /* LockingScreenInteractor.swift in Sources */,
 				FA4C4728257F8EE200119A1F /* WatchFacesListRouter.swift in Sources */,
+				FA7F1DF125AF369E00ECECD3 /* Gif2LiveService.swift in Sources */,
 				FAA95DBB258216020028B4D4 /* WatchPreviewInteractor.swift in Sources */,
 				FA7F1C9325A1DA3400ECECD3 /* WebViewBuilder.swift in Sources */,
+				FA7F1E0025AF864600ECECD3 /* GuideScreenRouter.swift in Sources */,
 				FAF9095B25853D670037B372 /* SecondScreenView.swift in Sources */,
 				FA4C472B257F8EEF00119A1F /* WatchFacesListBuilder.swift in Sources */,
 				FAA95E04258373A40028B4D4 /* ThirdScreenVC.swift in Sources */,
 				FA4C472E257F94A200119A1F /* WatchFacesTopView.swift in Sources */,
 				FAA95DE525835FC60028B4D4 /* LockingScreenVC.swift in Sources */,
 				FA4C46F7257F8B4600119A1F /* SceneDelegate.swift in Sources */,
+				FA7F1DCF25AF211500ECECD3 /* LivePhoto.swift in Sources */,
+				FA7F1E1D25B0631400ECECD3 /* AppEventsService.swift in Sources */,
 				FA4C4719257F8E9F00119A1F /* WatchFacesListVC.swift in Sources */,
 				FA4C4725257F8EDA00119A1F /* WatchFacesListPresenter.swift in Sources */,
+				FA7F1DCB25AF20D200ECECD3 /* ImageExtension.swift in Sources */,
 				FA7F1CC525A5AA3A00ECECD3 /* SpinnerVC.swift in Sources */,
 				FA4C475A2580A77400119A1F /* LeftMenuBuilder.swift in Sources */,
 				FA7F1CF825A709BE00ECECD3 /* SwiftyStoreService.swift in Sources */,
+				FA7F1D6425AB889100ECECD3 /* RestoreResponse.swift in Sources */,
 				FA7F1C75259B2E8800ECECD3 /* WatchListService.swift in Sources */,
+				FA7F1E0925AF918D00ECECD3 /* GuideScreenEntity.swift in Sources */,
 				FA7F1C9B25A1E81C00ECECD3 /* LeftMenuInteractor.swift in Sources */,
 				FA7F1C71259B2E7B00ECECD3 /* WatchListBuilder.swift in Sources */,
 				FAA95DEF258360AE0028B4D4 /* LockingScreenPresenter.swift in Sources */,
 				FA7F1C78259B2F9600ECECD3 /* WatchList.swift in Sources */,
+				FA7F1E5E25B0847B00ECECD3 /* StartScreenRouter.swift in Sources */,
 				FAF9095E258546B60037B372 /* ThirdScreenView.swift in Sources */,
 				FA7F1C8A25A1DA1600ECECD3 /* WebViewInteractor.swift in Sources */,
+				FA7F1E2125B063F800ECECD3 /* AppStoreReviewBuilder.swift in Sources */,
 				FAA95E01258373990028B4D4 /* SecondScreenVC.swift in Sources */,
 				FAA95E07258373D30028B4D4 /* WelcomeTourInteractor.swift in Sources */,
 				FAA95DB8258215F90028B4D4 /* WatchPreviewBuilder.swift in Sources */,
 				FAA95E0D258373E40028B4D4 /* WelcomeTourRouter.swift in Sources */,
+				FA7F1E0325AF864E00ECECD3 /* GuideScreenBuilder.swift in Sources */,
 				FAA95E0A258373DD0028B4D4 /* WelcomeTourPresenter.swift in Sources */,
+				FA7F1D6125A888FB00ECECD3 /* InAppProduct.swift in Sources */,
+				FA7F1DFD25AF863E00ECECD3 /* GuideScreenPresenter.swift in Sources */,
 				FA7F1C8D25A1DA2200ECECD3 /* WebViewPresenter.swift in Sources */,
-				FA7F1C9825A1E74200ECECD3 /* AppStoreReviewManager.swift in Sources */,
+				FA7F1C9825A1E74200ECECD3 /* AppStoreReviewService.swift in Sources */,
 				FA4C47502580A70000119A1F /* LeftMenuVC.swift in Sources */,
 				FA4C4739257F9E5A00119A1F /* Extensions.swift in Sources */,
 				FA4C4721257F8ECF00119A1F /* WatchFacesListInteractor.swift in Sources */,
 				FAA95E10258373EA0028B4D4 /* WelcomeTourBuilder.swift in Sources */,
 				FAA95DC1258216120028B4D4 /* WatchPreviewRouter.swift in Sources */,
 				FAA95DF2258360B60028B4D4 /* LockingScreenRouter.swift in Sources */,
+				FA7F1E6125B0848300ECECD3 /* StartScreenBuilder.swift in Sources */,
 				FA7F1D0225A7199F00ECECD3 /* GroupCVC.swift in Sources */,
 				FA7F1C6C259B2DD600ECECD3 /* HttpClient.swift in Sources */,
 				FA4C473D257FAA4E00119A1F /* CategoryTVC.swift in Sources */,
 				FA7F1C8725A1D9F900ECECD3 /* WebView.swift in Sources */,
+				FA7F1DFA25AF862000ECECD3 /* GuideScreenVC.swift in Sources */,
+				FA7F1DC825AF20CC00ECECD3 /* AVAssetExtension.swift in Sources */,
+				FA7F1E5B25B0847300ECECD3 /* StartScreenPresenter.swift in Sources */,
+				FA7F1DC525AF20BF00ECECD3 /* VideoGeneratorError.swift in Sources */,
 				FA4C477E2580B9E900119A1F /* FacesGroupBuilder.swift in Sources */,
 				FA7F1C8425A1D9DE00ECECD3 /* WebViewVC.swift in Sources */,
 				FA7F1C6B259B2DD600ECECD3 /* Result.swift in Sources */,
@@ -736,8 +934,33 @@
 			isa = PBXVariantGroup;
 			children = (
 				FA4C4700257F8B4A00119A1F /* Base */,
+				FA7F1D3425A7B09C00ECECD3 /* ru */,
+				FA7F1D3525A7B0EF00ECECD3 /* de */,
+				FA7F1D3625A7B0FC00ECECD3 /* es */,
+				FA7F1D3725A7B10B00ECECD3 /* pt-PT */,
+				FA7F1D3825A7B11400ECECD3 /* it */,
+				FA7F1D3925A7B11C00ECECD3 /* fr */,
+				FA7F1D3A25A7B12E00ECECD3 /* zh-HK */,
+				FA7F1D3B25A7B13B00ECECD3 /* zh-Hans */,
+				FA7F1D3C25A7B14500ECECD3 /* zh-Hant */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		FA7F1D4225A7B18300ECECD3 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA7F1D4125A7B18300ECECD3 /* zh-HK */,
+				FA7F1D4325A7B18800ECECD3 /* zh-Hans */,
+				FA7F1D4425A7B18A00ECECD3 /* zh-Hant */,
+				FA7F1D4525A7B18F00ECECD3 /* fr */,
+				FA7F1D4625A7B19000ECECD3 /* de */,
+				FA7F1D4725A7B19200ECECD3 /* it */,
+				FA7F1D4825A7B19300ECECD3 /* pt-PT */,
+				FA7F1D4925A7B19500ECECD3 /* ru */,
+				FA7F1D4A25A7B19700ECECD3 /* es */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -747,6 +970,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -808,6 +1032,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -873,7 +1098,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.watch.faces;
+				PRODUCT_BUNDLE_IDENTIFIER = com.watch.face;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -894,7 +1119,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.watch.faces;
+				PRODUCT_BUNDLE_IDENTIFIER = com.watch.face;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

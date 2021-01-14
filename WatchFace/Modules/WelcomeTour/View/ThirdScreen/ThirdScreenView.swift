@@ -38,7 +38,7 @@ class ThirdScreenView: UIView {
     private (set) var topLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 31.0, weight: .bold)
-        label.text = "Премиум подписка"
+        label.text = "Premium subscription".localized
         label.textColor = UIColor(named: "darkTextColor")
         label.numberOfLines = 1
         label.adjustsFontSizeToFitWidth = true
@@ -65,7 +65,7 @@ class ThirdScreenView: UIView {
     private (set) var firstSubscriptionLineLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 15.0, weight: .medium)
-        label.text = "Доступ ко всем циферблатам"
+        label.text = "Access to all clock faces".localized
         label.textColor = UIColor(named: "darkTextColor")
         label.numberOfLines = 1
         label.adjustsFontSizeToFitWidth = true
@@ -76,7 +76,7 @@ class ThirdScreenView: UIView {
     private (set) var secondSubscriptionLineLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 15.0, weight: .medium)
-        label.text = "Никакой рекламы"
+        label.text = "No ad".localized
         label.textColor = UIColor(named: "darkTextColor")
         label.numberOfLines = 1
         label.adjustsFontSizeToFitWidth = true
@@ -84,36 +84,42 @@ class ThirdScreenView: UIView {
         return label
     }()
     
-    private (set) var nextBtn: UIButton = {
-        let button = UIButton(type: .system)
+    private (set) var nextBtn: LoadingButton = {
+        let button = LoadingButton(type: .system)
         button.layer.masksToBounds = true
         button.layer.cornerRadius = 12.0
         button.backgroundColor = UIColor(named: "baseOrange")
-        button.setTitle("Подписаться", for: .normal)
+        button.setTitle("Subscribe".localized, for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 20.0, weight: .semibold)
         button.setTitleColor(.white, for: .normal)
         return button
     }()
     
     private (set) var monthSubscriptionBtn: UIButton = {
-        let button = UIButton(type: .system)
-        button.layer.masksToBounds = true
-        button.layer.cornerRadius = 12.0
-        button.backgroundColor = UIColor(named: "darkBlue")
-        button.setTitleColor(.white, for: .normal)
-        button.setTitle("Месячная подписка 299₽/месяц", for: .normal)
-        button.titleLabel?.font = .systemFont(ofSize: 16.0, weight: .semibold)
-        return button
-    }()
-    
-    private (set) var yearSubscriptionBtn: UIButton = {
-        let button = UIButton(type: .system)
+        let button = UIButton()
         button.layer.masksToBounds = true
         button.layer.cornerRadius = 12.0
         button.backgroundColor = UIColor.lightGray.withAlphaComponent(0.2)
         button.setTitleColor(.black, for: .normal)
-        button.setTitle("Годовая подписка 1990₽/год", for: .normal)
+        button.setTitle("Month subscription".localized + " ___,__ " + "per month".localized, for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 16.0, weight: .semibold)
+        button.titleLabel?.lineBreakMode = .byWordWrapping
+        button.titleLabel?.numberOfLines = 2
+        button.titleLabel?.textAlignment = .center
+        return button
+    }()
+    
+    private (set) var weekSubscriptionBtn: UIButton = {
+        let button = UIButton()
+        button.layer.masksToBounds = true
+        button.layer.cornerRadius = 12.0
+        button.backgroundColor = UIColor(named: "darkBlue")
+        button.setTitleColor(.white, for: .normal)
+        button.setTitle("Week subscription".localized + " ___,__ " + "per week".localized, for: .normal)
+        button.titleLabel?.font = .systemFont(ofSize: 16.0, weight: .semibold)
+        button.titleLabel?.lineBreakMode = .byWordWrapping
+        button.titleLabel?.numberOfLines = 2
+        button.titleLabel?.textAlignment = .center
         return button
     }()
     
@@ -135,7 +141,7 @@ class ThirdScreenView: UIView {
     private (set) var subscriptionLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 15.0, weight: .medium)
-        label.text = "Start your 3 days free trial. The plan renews automaticaly. Cancel anytime"
+        label.text = "Start your 3 days free trial".localized + ". " + "The plan renews automaticaly".localized + ". " + "Cancel any time".localized
         label.textColor = UIColor(named: "darkTextColor")
         label.numberOfLines = 2
         label.adjustsFontSizeToFitWidth = true
@@ -146,8 +152,8 @@ class ThirdScreenView: UIView {
     private (set) var privacyBtn: UIButton = {
         let button = UIButton(type: .system)
         button.setTitleColor(.black, for: .normal)
-        button.titleLabel?.font = .systemFont(ofSize: 15.0, weight: .regular)
-        button.setTitle("Privacy Policy", for: .normal)
+        button.titleLabel?.font = .systemFont(ofSize: 13.0, weight: .regular)
+        button.setTitle("Privacy policy".localized, for: .normal)
         button.contentHorizontalAlignment = .left
         return button
     }()
@@ -155,8 +161,8 @@ class ThirdScreenView: UIView {
     private (set) var termsBtn: UIButton = {
         let button = UIButton(type: .system)
         button.setTitleColor(.black, for: .normal)
-        button.titleLabel?.font = .systemFont(ofSize: 15.0, weight: .regular)
-        button.setTitle("Terms & Conditions", for: .normal)
+        button.titleLabel?.font = .systemFont(ofSize: 13.0, weight: .regular)
+        button.setTitle("Terms".localized, for: .normal)
         button.contentHorizontalAlignment = .right
         return button
     }()
@@ -165,14 +171,17 @@ class ThirdScreenView: UIView {
         let button = UIButton(type: .system)
         button.setTitleColor(.black, for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 15.0, weight: .regular)
-        button.setTitle("Restore purchases", for: .normal)
+        button.setTitle("Restore purchases".localized, for: .normal)
         button.contentHorizontalAlignment = .right
         return button
     }()
     
-    init() {
+    init(weekPrice: String?, monthPrice: String?) {
         super.init(frame: .zero)
-        
+
+        setWeekPrice(weekPrice)
+        setMonthPrice(monthPrice)
+
         backgroundColor = .white
         
         makeConstraints()
@@ -288,9 +297,9 @@ class ThirdScreenView: UIView {
             $0.top.equalTo(secondSubscriptionLineLabel.snp.bottom).offset(16.0)
         }
         
-        addSubview(yearSubscriptionBtn)
+        addSubview(weekSubscriptionBtn)
         
-        yearSubscriptionBtn.snp.makeConstraints {
+        weekSubscriptionBtn.snp.makeConstraints {
             $0.left.equalToSuperview().offset(20.0)
             $0.right.equalToSuperview().offset(-20.0)
             $0.height.equalTo(self.snp.height).multipliedBy(0.089)
@@ -312,6 +321,7 @@ class ThirdScreenView: UIView {
             $0.right.equalToSuperview().offset(-20.0)
             $0.height.equalTo(self.snp.height).multipliedBy(0.089)
             $0.bottom.equalTo(self.pageControl.snp.top).offset(-16.0)
+            $0.height.lessThanOrEqualTo(64.0)
         }
         
         addSubview(subscriptionLabel)
@@ -361,5 +371,53 @@ extension ThirdScreenView {
     
     func addRestoreTarget(target: Any?, action: Selector) {
         restoreBtn.addTarget(target, action: action, for: .touchUpInside)
+    }
+    
+    func addWeekSubscriptionTarget(target: Any?, action: Selector) {
+        weekSubscriptionBtn.addTarget(target, action: action, for: .touchUpInside)
+    }
+    
+    func addMonthSubscriptionTarget(target: Any?, action: Selector) {
+        monthSubscriptionBtn.addTarget(target, action: action, for: .touchUpInside)
+    }
+}
+
+extension ThirdScreenView {
+    func setWeekPrice(_ str: String?) {
+        
+        if let str = str {
+            weekSubscriptionBtn.setTitle("Week subscription".localized +
+                                            " " + str + " " +
+                                            "per week".localized, for: .normal)
+        } else {
+            weekSubscriptionBtn.setTitle("Week subscription".localized, for: .normal)
+        }
+
+    }
+    
+    func setMonthPrice(_ str: String?) {
+        if let str = str {
+            monthSubscriptionBtn.setTitle("Month subscription".localized +
+                                            " " + str + " " +
+                                            "per month".localized, for: .normal)
+        } else {
+            monthSubscriptionBtn.setTitle("Month subscription".localized, for: .normal)
+        }
+    }
+    
+    func weekSelected() {
+        weekSubscriptionBtn.backgroundColor = UIColor(named: "darkBlue")
+        weekSubscriptionBtn.setTitleColor(.white, for: .normal)
+        
+        monthSubscriptionBtn.backgroundColor = UIColor.lightGray.withAlphaComponent(0.2)
+        monthSubscriptionBtn.setTitleColor(.black, for: .normal)
+    }
+    
+    func monthSelected() {
+        monthSubscriptionBtn.backgroundColor = UIColor(named: "darkBlue")
+        monthSubscriptionBtn.setTitleColor(.white, for: .normal)
+        
+        weekSubscriptionBtn.backgroundColor = UIColor.lightGray.withAlphaComponent(0.2)
+        weekSubscriptionBtn.setTitleColor(.black, for: .normal)
     }
 }

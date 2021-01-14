@@ -1,6 +1,14 @@
 PODS:
   - Alamofire (4.9.1)
   - AlignedCollectionViewFlowLayout (1.1.2)
+  - FacebookCore (0.9.0):
+    - FBSDKCoreKit (~> 5.0)
+  - FBSDKCoreKit (5.15.1):
+    - FBSDKCoreKit/Basics (= 5.15.1)
+    - FBSDKCoreKit/Core (= 5.15.1)
+  - FBSDKCoreKit/Basics (5.15.1)
+  - FBSDKCoreKit/Core (5.15.1):
+    - FBSDKCoreKit/Basics
   - Google-Mobile-Ads-SDK (7.67.1):
     - GoogleAppMeasurement (~> 7.0)
     - GoogleUserMessagingPlatform (~> 1.1)
@@ -39,25 +47,33 @@ PODS:
   - nanopb/encode (2.30906.0)
   - PromisesObjC (1.2.11)
   - SideMenu (6.5.0)
-  - SkeletonView (1.10.0)
   - SnapKit (5.0.1)
   - SwiftyStoreKit (0.16.1)
+  - YandexMobileMetrica/Dynamic (3.12.0):
+    - YandexMobileMetrica/Dynamic/Core (= 3.12.0)
+    - YandexMobileMetrica/Dynamic/Crashes (= 3.12.0)
+  - YandexMobileMetrica/Dynamic/Core (3.12.0)
+  - YandexMobileMetrica/Dynamic/Crashes (3.12.0):
+    - YandexMobileMetrica/Dynamic/Core
 
 DEPENDENCIES:
   - Alamofire (~> 4.5)
   - AlignedCollectionViewFlowLayout
+  - FacebookCore
   - Google-Mobile-Ads-SDK
   - Hero
   - Kingfisher
   - SideMenu
-  - SkeletonView
   - SnapKit (~> 5.0.0)
   - SwiftyStoreKit
+  - YandexMobileMetrica/Dynamic (= 3.12.0)
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - AlignedCollectionViewFlowLayout
+    - FacebookCore
+    - FBSDKCoreKit
     - Google-Mobile-Ads-SDK
     - GoogleAppMeasurement
     - GoogleUserMessagingPlatform
@@ -67,13 +83,15 @@ SPEC REPOS:
     - nanopb
     - PromisesObjC
     - SideMenu
-    - SkeletonView
     - SnapKit
     - SwiftyStoreKit
+    - YandexMobileMetrica
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   AlignedCollectionViewFlowLayout: ee2ef451e741ec08f8e0967d828001e2f051c20a
+  FacebookCore: ba86524b66cfa86d0f8e65d08faa8504a9f732dd
+  FBSDKCoreKit: 1d5acf7c9d7a2f92bb1a242dc60cae5b7adb91df
   Google-Mobile-Ads-SDK: 4c11bba9a823ed16c42f14d42feebc7678fbfd6a
   GoogleAppMeasurement: 7790ef975d1d463c8614cd949a847e612edf087a
   GoogleUserMessagingPlatform: b168e8c46cd8f92aa3e34b584c4ca78a411ce367
@@ -83,10 +101,10 @@ SPEC CHECKSUMS:
   nanopb: 1bf24dd71191072e120b83dd02d08f3da0d65e53
   PromisesObjC: 8c196f5a328c2cba3e74624585467a557dcb482f
   SideMenu: f583187d21c5b1dd04c72002be544b555a2627a2
-  SkeletonView: 14fbe9702c7fb5c5f011b44ac3ae99fc73155726
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SwiftyStoreKit: 6b9c08810269f030586dac1fae8e75871a82e84a
+  YandexMobileMetrica: 7ba67267e1ef841f77d5db17a5091b8e9eba911f
 
-PODFILE CHECKSUM: fa30593e1b98fd378b1ee8f7bc6795378baf866d
+PODFILE CHECKSUM: ddb9df7f7ae0352cb2c5609a65f3fd17931dba0f
 
 COCOAPODS: 1.9.3

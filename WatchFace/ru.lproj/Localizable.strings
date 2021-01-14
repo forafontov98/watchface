@@ -1,0 +1,73 @@
+/* 
+  Localizable.strings
+  WatchFace
+
+  Created by MacBook on 08.01.2021.
+  
+*/
+
+"For Apple Watch" = "Для Apple Watch";
+"Clock faces" = "Циферблаты";
+"Choose from a large library of unique and stunning dials" = "Выбирай из большой и уникальной библиотеки великолепных циферблатов";
+"Set an individual style" = "Задай индивидуальный стиль";
+"Various" = "Разнообразные";
+"Pick up the dials that match your mood or lifestyle" = "Подбери циферблаты соответствующий твоему настроению или образу жизни";
+"Premium subscription" = "Премиум подписка";
+"Access to all clock faces" = "Доступ ко всем циферблатам";
+"No ad" = "Без рекламы";
+"Month subscription" = "Месячная подписка ";
+"per month" = "в месяц";
+"Annual subscription" = "Годовая подписка ";
+"per year" = "в год";
+"Week subscription" = "Недельная подписка";
+"per week" = "в неделю";
+"Start your 3 days free trial" = "Начните 3-дневную бесплатную пробную версию";
+"The plan renews automaticaly" = "План обновляется автоматически";
+"Cancel any time" = "Отмена в любое время";
+"Subscribe" = "Подписаться";
+"Clock faces" = "Циферблаты";
+"More" = "Больше";
+"Clock face of the day" = "Циферблат дня";
+"Clock face of the month" = "Циферблат месяца";
+"Support" = "Поддержка";
+"About subscription" = "О подписке";
+"Terms" = "Соглашения пользователя";
+"Privacy policy" = "Условия конфиденциальности";
+"About" = "О приложении";
+"Rate the app" = "Оценить приложение";
+"Restore purchases" = "Восстановить покупки";
+"Download" = "Скачать";
+"To download the watch face, watch an ad or sign up for a subscription" = "Чтобы скачать циферблат часов, посмотри рекламу или оформи подписку";
+"Subscribe" = "Подписаться";
+"Next" = "Далее";
+"Cancel" = "Отмена";
+"Don't show it again" = "Больше не показывать";
+"Ok" = "Понятно";
+"Find the line \"Create Watch Face\"" = "Найдите строку \"Create Watch Face\"";
+"Ad" = "См. рекламу";
+"Settings" = "Настройки";
+"Success" = "Успех";
+"The subscription has been successfully paid for and is valid until" = "Подписка успешно оплачена и действительна до";
+"Expired" = "Истек срок";
+"Your subscription has expired" = "Срок подписки истек";
+"Mistake" = "Ошибка";
+"The subscription was not paid for" = "Подписка не была оплачена";
+
+"Loading" = "Загрузка";
+"Conversion to" = "Конвертация в";
+"Done, set the watch face from the gallery" = "Готово, установите циферблат из галереи";
+
+"Step 1" = "Шаг 1";
+"Choose your favorite watch face and click \"Save\"" = "Выбери понравившийся циферблат часов и нажми кнопку \"Сохранить\"";
+"Next" = "Далее";
+"Step 2" = "Шаг 2";
+"Allow photo access to save your watch faces" = "Разрешите доступ к фото, чтобы сохранить циферблаты часов";
+"Further" = "Далее";
+"Step 3" = "Шаг 3";
+"Click on the saved watch face in the gallery." = "Нажмите в галерее на сохраненный циферблат часов.";
+"Next, click on the \"Share\" button and select the \"Create Watch face\" option" = "Далее нажмите на кнопку \"Поделиться\" и выберите опцию \"Создать циферблат часов\"";
+"Next" = "Далее";
+"Step 4" = "Шаг 4";
+"Select the desired option and click \"Add\"" = "Выберите нужную опцию и нажмите кнопку \"Добавить\"";
+"Next" = "Далее";
+"Installation guide" = "Инструкция по установке";
